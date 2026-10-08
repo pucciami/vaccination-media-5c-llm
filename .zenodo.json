@@ -1,0 +1,75 @@
+{
+  "title": "Code and data for \"From annotation towards surveillance: adapted open-weight large language models for article-level 5C classification of vaccination-related media discourse, Slovenia, 2010–2024\"",
+  "upload_type": "software",
+  "description": "<p>Code, prompts, codebook and de-identified result files for the article \"From annotation towards surveillance: adapted open-weight large language models for article-level 5C classification of vaccination-related media discourse, Slovenia, 2010–2024\" by Mario Fafangel, Janez &#381;ibert and Lijana Zaletel-Kragelj (manuscript for Eurosurveillance).</p><p>The study built a two-stage pipeline of open-weight large language models. A relevance classifier decides whether a mainstream-media article is about vaccination, and an extractor records which of the 5C constructs the article contains (Confidence, Complacency, Constraints, Calculation, Collective Responsibility) and the valence of each. Two model families, Qwen3-32B and Apertus-8B, were adapted with LoRA and one round of active learning and scored once on a held-out evaluation set of 100 double-annotated articles, on which the better-performing family was also chosen. The pipeline was then applied to the weeks around the September 2021 suspension of a COVID-19 vaccine in Slovenia. The labels describe how articles frame vaccination; they do not measure individual attitudes or behaviour.</p><p>The record contains the annotation codebook, the two prompts, the adaptation and decoding settings, the pipeline source from sampling to inference, the analysis scripts, de-identified per-article result files for six systems, the weekly event-window series, the event-window audit labels and six invented example articles. The record also holds the two annotators' labels before adjudication, the predictions on the machine-translated English articles and two sampled-decoding runs of Apertus-8B, all without text, and the scripts used for the machine translation. Running <code>python reproduce.py</code> recomputes the evaluation-set, event-window, audit, inter-annotator, cross-lingual and decoding-check results and checks them against the values printed in the article and its supplement. The corpus, sampling, active-learning and candidate counts need the restricted corpus, and the two audit coders' separate codings are available from the authors on request.</p><p>No article text is included. The corpus is an institutional press-clipping corpus held by the National Institute of Public Health Slovenia (NIJZ) and is subject to the terms of the press-clipping service. The four LoRA adapters reported in the article are on Hugging Face.</p><p>Licences: MIT for code; CC BY 4.0 for documentation, codebook, prompts and data. The adapters carry the Apache-2.0 licence of their base models.</p>",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Fafangel, Mario",
+      "affiliation": "University of Ljubljana, Faculty of Medicine, Department of Public Health; National Institute of Public Health Slovenia",
+      "orcid": "0009-0005-3724-5102"
+    },
+    {
+      "name": "Žibert, Janez",
+      "affiliation": "University of Ljubljana, Faculty of Health Sciences",
+      "orcid": "0000-0003-2312-5431"
+    },
+    {
+      "name": "Zaletel-Kragelj, Lijana",
+      "affiliation": "University of Ljubljana, Faculty of Medicine, Department of Public Health; National Institute of Public Health Slovenia",
+      "orcid": "0000-0003-1014-7906"
+    }
+  ],
+  "keywords": [
+    "vaccination",
+    "mass media",
+    "natural language processing",
+    "large language models",
+    "5C framework",
+    "public health surveillance",
+    "health communication",
+    "infodemiology",
+    "Slovenia"
+  ],
+  "notes": "This record holds the content of the GitHub repository pucciami/vaccination-media-5c-llm at release v1.2.0. The article DOI will be added as a related identifier on acceptance.",
+  "version": "1.2.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://huggingface.co/Qwen/Qwen3-32B",
+      "relation": "requires",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/swiss-ai/Apertus-8B-Instruct-2509",
+      "relation": "requires",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/facebook/nllb-200-distilled-1.3B",
+      "relation": "requires",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/Pucciami/vaccination-media-5c-qwen3-32b-lora",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/Pucciami/vaccination-media-5c-qwen3-32b-lora-supervised",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/Pucciami/vaccination-media-5c-apertus-8b-lora",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/Pucciami/vaccination-media-5c-apertus-8b-lora-supervised",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ],
+  "language": "eng"
+}

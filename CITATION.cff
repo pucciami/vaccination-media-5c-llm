@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite both the package (via its Zenodo DOI) and the associated article."
+title: "Code and data for \"From annotation towards surveillance: adapted open-weight large language models for article-level 5C classification of vaccination-related media discourse, Slovenia, 2010–2024\""
+type: software
+doi: 10.5281/zenodo.22912892
+repository-code: "https://github.com/pucciami/vaccination-media-5c-llm"
+authors:
+  - family-names: Fafangel
+    given-names: Mario
+    orcid: "https://orcid.org/0009-0005-3724-5102"
+    affiliation: "University of Ljubljana, Faculty of Medicine, Department of Public Health; National Institute of Public Health Slovenia"
+  - family-names: Žibert
+    given-names: Janez
+    orcid: "https://orcid.org/0000-0003-2312-5431"
+    affiliation: "University of Ljubljana, Faculty of Health Sciences"
+  - family-names: Zaletel-Kragelj
+    given-names: Lijana
+    orcid: "https://orcid.org/0000-0003-1014-7906"
+    affiliation: "University of Ljubljana, Faculty of Medicine, Department of Public Health; National Institute of Public Health Slovenia"
+# Code (scripts/, pipeline/, examples/*.py, reproduce.py) is MIT; documentation, codebook,
+# prompts and the de-identified data files are CC BY 4.0. See LICENSE and LICENSE-DOCS.
+license:
+  - MIT
+  - CC-BY-4.0
+version: "1.2.0"
+date-released: "2026-09-19"
+keywords:
+  - vaccination
+  - mass media
+  - natural language processing
+  - large language models
+  - 5C framework
+  - public health surveillance
+  - health communication
+  - infodemiology
+  - Slovenia
+preferred-citation:
+  type: article
+  title: "From annotation towards surveillance: adapted open-weight large language models for article-level 5C classification of vaccination-related media discourse, Slovenia, 2010–2024"
+  authors:
+    - family-names: Fafangel
+      given-names: Mario
+    - family-names: Žibert
+      given-names: Janez
+    - family-names: Zaletel-Kragelj
+      given-names: Lijana
+  journal: "Eurosurveillance"
+  year: 2026
+  notes: "DOI to be assigned on acceptance."

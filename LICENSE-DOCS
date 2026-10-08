@@ -1,0 +1,31 @@
+Documentation and data licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Mario Fafangel, the University of Ljubljana and the National Institute of Public Health Slovenia (NIJZ).
+
+The following material in this package is licensed under the Creative Commons
+Attribution 4.0 International licence:
+- documentation: README.md, pipeline/README.md, CHANGELOG.md and the
+  configuration notes (configs/);
+- the annotation codebook (codebook/);
+- the classification prompts (prompts/);
+- the model cards (model_cards/) and the expected values (expected/);
+- the aggregate and de-identified data files (data/) and the synthetic
+  example articles (examples/synthetic_articles.csv);
+- the citation metadata (CITATION.cff, .zenodo.json).
+
+You are free to share and adapt this material for any purpose, provided you
+give appropriate credit.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+All code (scripts/, pipeline/ except pipeline/README.md, reproduce.py,
+examples/build_example_input.py, requirements.txt and .github/) is licensed
+separately under the MIT License; see LICENSE.
+
+Model weights are not part of this package. The LoRA adapters released on
+Hugging Face keep the licence of their base model (Qwen3-32B: Apache-2.0;
+Apertus-8B-Instruct-2509: Apache-2.0).
+
+No raw article texts are included in this package; the underlying media corpus
+is restricted (see README, "Restricted data").

@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "relevance": {
+      "type": "string",
+      "enum": ["relevant", "not_relevant"]
+    },
+    "disease_1": {
+      "type": ["string", "null"],
+      "enum": ["covid19", "influenza", "measles", "hpv", "unspecified", "other", null]
+    },
+    "has_relevant_5c": {
+      "type": ["string", "null"],
+      "enum": ["yes", "no", null]
+    },
+    "c5_presence_d1": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "confidence",
+          "complacency",
+          "constraints",
+          "calculation",
+          "collective_responsibility"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "valence_confidence_d1": {
+      "type": ["integer", "null"],
+      "enum": [-1, 0, 1, null]
+    },
+    "valence_complacency_d1": {
+      "type": ["integer", "null"],
+      "enum": [-1, 0, 1, null]
+    },
+    "valence_constraints_d1": {
+      "type": ["integer", "null"],
+      "enum": [-1, 0, 1, null]
+    },
+    "valence_calculation_d1": {
+      "type": ["integer", "null"],
+      "enum": [-1, 0, 1, null]
+    },
+    "valence_collective_d1": {
+      "type": ["integer", "null"],
+      "enum": [-1, 0, 1, null]
+    }
+  },
+  "required": [
+    "relevance",
+    "disease_1",
+    "has_relevant_5c",
+    "c5_presence_d1",
+    "valence_confidence_d1",
+    "valence_complacency_d1",
+    "valence_constraints_d1",
+    "valence_calculation_d1",
+    "valence_collective_d1"
+  ]
+}

@@ -1,0 +1,287 @@
+period,indicator_id,family,value,is_baseline,is_signal_window,is_context_week,phi_raw,phi_used,z_ascoded,z_baseUnc,z_quasi,z_ears,ears_band
+2021-08-02,article_volume,volume,156.0,True,False,False,11.405,11.405,-3.44,-3.44,-1.02,-1.02,within_reference
+2021-08-09,article_volume,volume,148.0,True,False,False,11.405,11.405,-4.0,-4.0,-1.18,-1.18,within_reference
+2021-08-16,article_volume,volume,203.0,True,False,False,11.405,11.405,-0.16,-0.16,-0.05,-0.05,within_reference
+2021-08-23,article_volume,volume,195.0,True,False,False,11.405,11.405,-0.72,-0.72,-0.21,-0.21,within_reference
+2021-08-30,article_volume,volume,212.0,True,False,False,11.405,11.405,0.47,0.47,0.14,0.14,within_reference
+2021-09-06,article_volume,volume,231.0,True,False,False,11.405,11.405,1.79,1.79,0.53,0.53,within_reference
+2021-09-13,article_volume,volume,292.0,True,False,False,11.405,11.405,6.05,6.05,1.79,1.79,within_reference
+2021-09-20,article_volume,volume,259.0,False,False,True,11.405,11.405,3.75,3.75,1.11,1.11,within_reference
+2021-09-27,article_volume,volume,195.0,False,True,False,11.405,11.405,-0.72,-0.72,-0.21,-0.21,within_reference
+2021-10-04,article_volume,volume,148.0,False,True,False,11.405,11.405,-4.0,-4.0,-1.18,-1.18,within_reference
+2021-10-11,article_volume,volume,124.0,False,False,False,11.405,11.405,-5.67,-5.67,-1.68,-1.68,within_reference
+2021-10-18,article_volume,volume,141.0,False,False,False,11.405,11.405,-4.49,-4.49,-1.33,-1.33,within_reference
+2021-10-25,article_volume,volume,201.0,False,False,False,11.405,11.405,-0.3,-0.3,-0.09,-0.09,within_reference
+2021-11-01,article_volume,volume,194.0,False,False,False,11.405,11.405,-0.79,-0.79,-0.23,-0.23,within_reference
+2021-11-08,article_volume,volume,155.0,False,False,False,11.405,11.405,-3.51,-3.51,-1.04,-1.04,within_reference
+2021-11-15,article_volume,volume,184.0,False,False,False,11.405,11.405,-1.49,-1.49,-0.44,-0.44,within_reference
+2021-11-22,article_volume,volume,244.0,False,False,False,11.405,11.405,2.7,2.7,0.8,0.8,within_reference
+2021-11-29,article_volume,volume,228.0,False,False,False,11.405,11.405,1.59,1.59,0.47,0.47,within_reference
+2021-12-06,article_volume,volume,160.0,False,False,False,11.405,11.405,-3.16,-3.16,-0.94,-0.94,within_reference
+2021-12-13,article_volume,volume,298.0,False,False,False,11.405,11.405,6.47,6.47,1.92,1.92,within_reference
+2021-12-20,article_volume,volume,278.0,False,False,False,11.405,11.405,5.08,5.08,1.5,1.5,within_reference
+2021-12-27,article_volume,volume,212.0,False,False,False,11.405,11.405,0.47,0.47,0.14,0.14,within_reference
+2021-08-02,janssen_lexical_share,context,0.1346153846153846,True,False,False,5.606,5.606,3.5,3.32,1.4,1.64,within_reference
+2021-08-09,janssen_lexical_share,context,0.081081081081081,True,False,False,5.606,5.606,0.77,0.73,0.31,0.35,within_reference
+2021-08-16,janssen_lexical_share,context,0.0443349753694581,True,False,False,5.606,5.606,-1.21,-1.14,-0.48,-0.54,within_reference
+2021-08-23,janssen_lexical_share,context,0.041025641025641,True,False,False,5.606,5.606,-1.38,-1.29,-0.55,-0.62,within_reference
+2021-08-30,janssen_lexical_share,context,0.0330188679245283,True,False,False,5.606,5.606,-1.91,-1.78,-0.75,-0.81,within_reference
+2021-09-06,janssen_lexical_share,context,0.0259740259740259,True,False,False,5.606,5.606,-2.42,-2.25,-0.95,-0.98,within_reference
+2021-09-13,janssen_lexical_share,context,0.1061643835616438,True,False,False,5.606,5.606,2.82,2.57,1.08,0.95,within_reference
+2021-09-20,janssen_lexical_share,context,0.1042471042471042,False,False,True,5.606,5.606,2.53,2.33,0.98,0.91,within_reference
+2021-09-27,janssen_lexical_share,context,0.2666666666666666,False,True,False,5.606,5.606,11.37,10.67,4.5,4.82,signal_99to999
+2021-10-04,janssen_lexical_share,context,0.2635135135135135,False,True,False,5.606,5.606,9.75,9.28,3.92,4.75,signal_99to999
+2021-10-11,janssen_lexical_share,context,0.2096774193548387,False,False,False,5.606,5.606,6.5,6.23,2.63,3.45,signal_99to999
+2021-10-18,janssen_lexical_share,context,0.1702127659574468,False,False,False,5.606,5.606,5.03,4.8,2.03,2.5,screening_95to99
+2021-10-25,janssen_lexical_share,context,0.0149253731343283,False,False,False,5.606,5.606,-2.89,-2.71,-1.15,-1.25,within_reference
+2021-11-01,janssen_lexical_share,context,0.0360824742268041,False,False,False,5.606,5.606,-1.65,-1.55,-0.66,-0.74,within_reference
+2021-11-08,janssen_lexical_share,context,0.032258064516129,False,False,False,5.606,5.606,-1.67,-1.59,-0.67,-0.83,within_reference
+2021-11-15,janssen_lexical_share,context,0.0217391304347826,False,False,False,5.606,5.606,-2.4,-2.26,-0.95,-1.08,within_reference
+2021-11-22,janssen_lexical_share,context,0.0204918032786885,False,False,False,5.606,5.606,-2.84,-2.62,-1.11,-1.11,within_reference
+2021-11-29,janssen_lexical_share,context,0.1096491228070175,False,False,False,5.606,5.606,2.7,2.51,1.06,1.04,within_reference
+2021-12-06,janssen_lexical_share,context,0.03125,False,False,False,5.606,5.606,-1.75,-1.66,-0.7,-0.85,within_reference
+2021-12-13,janssen_lexical_share,context,0.0302013422818791,False,False,False,5.606,5.606,-2.46,-2.24,-0.94,-0.88,within_reference
+2021-12-20,janssen_lexical_share,context,0.0575539568345323,False,False,False,5.606,5.606,-0.53,-0.49,-0.2,-0.22,within_reference
+2021-12-27,janssen_lexical_share,context,0.0330188679245283,False,False,False,5.606,5.606,-1.91,-1.78,-0.75,-0.81,within_reference
+2021-08-02,any_5c_share,context,0.9294871794871796,True,False,False,0.71,1.0,-0.37,-0.35,-0.35,-0.49,within_reference
+2021-08-09,any_5c_share,context,0.945945945945946,True,False,False,0.71,1.0,0.46,0.44,0.44,0.66,within_reference
+2021-08-16,any_5c_share,context,0.9113300492610836,True,False,False,0.71,1.0,-1.48,-1.39,-1.39,-1.75,within_reference
+2021-08-23,any_5c_share,context,0.9487179487179488,True,False,False,0.71,1.0,0.69,0.65,0.65,0.85,within_reference
+2021-08-30,any_5c_share,context,0.9481132075471698,True,False,False,0.71,1.0,0.68,0.64,0.64,0.81,within_reference
+2021-09-06,any_5c_share,context,0.9264069264069263,True,False,False,0.71,1.0,-0.64,-0.59,-0.59,-0.7,within_reference
+2021-09-13,any_5c_share,context,0.9452054794520548,True,False,False,0.71,1.0,0.6,0.55,0.55,0.61,within_reference
+2021-09-20,any_5c_share,context,0.915057915057915,False,False,True,0.71,1.0,-1.43,-1.31,-1.31,-1.49,within_reference
+2021-09-27,any_5c_share,context,0.9384615384615383,False,True,False,0.71,1.0,0.1,0.1,0.1,0.14,within_reference
+2021-10-04,any_5c_share,context,0.9121621621621622,False,True,False,0.71,1.0,-1.22,-1.17,-1.17,-1.69,within_reference
+2021-10-11,any_5c_share,context,0.8629032258064516,False,False,False,0.71,1.0,-3.37,-3.24,-3.24,-5.13,within_reference
+2021-10-18,any_5c_share,context,0.9361702127659576,False,False,False,0.71,1.0,-0.02,-0.02,-0.02,-0.02,within_reference
+2021-10-25,any_5c_share,context,0.8756218905472637,False,False,False,0.71,1.0,-3.55,-3.33,-3.33,-4.24,within_reference
+2021-11-01,any_5c_share,context,0.9432989690721648,False,False,False,0.71,1.0,0.38,0.36,0.36,0.48,within_reference
+2021-11-08,any_5c_share,context,0.9225806451612903,False,False,False,0.71,1.0,-0.72,-0.68,-0.68,-0.97,within_reference
+2021-11-15,any_5c_share,context,0.967391304347826,False,False,False,0.71,1.0,1.71,1.61,1.61,2.16,screening_95to99
+2021-11-22,any_5c_share,context,0.930327868852459,False,False,False,0.71,1.0,-0.41,-0.38,-0.38,-0.43,within_reference
+2021-11-29,any_5c_share,context,0.9210526315789472,False,False,False,0.71,1.0,-0.97,-0.9,-0.9,-1.07,within_reference
+2021-12-06,any_5c_share,context,0.90625,False,False,False,0.71,1.0,-1.58,-1.5,-1.5,-2.11,within_reference
+2021-12-13,any_5c_share,context,0.953020134228188,False,False,False,0.71,1.0,1.16,1.05,1.05,1.15,within_reference
+2021-12-20,any_5c_share,context,0.8776978417266187,False,False,False,0.71,1.0,-4.04,-3.7,-3.7,-4.1,within_reference
+2021-12-27,any_5c_share,context,0.9198113207547168,False,False,False,0.71,1.0,-1.01,-0.94,-0.94,-1.16,within_reference
+2021-08-02,confidence_presence,5C construct presence,0.7756410256410257,True,False,False,1.966,1.966,-0.84,-0.8,-0.57,-0.65,within_reference
+2021-08-09,confidence_presence,5C construct presence,0.7635135135135135,True,False,False,1.966,1.966,-1.19,-1.13,-0.81,-0.97,within_reference
+2021-08-16,confidence_presence,5C construct presence,0.7733990147783252,True,False,False,1.966,1.966,-1.04,-0.97,-0.69,-0.71,within_reference
+2021-08-23,confidence_presence,5C construct presence,0.8256410256410256,True,False,False,1.966,1.966,0.82,0.77,0.55,0.64,within_reference
+2021-08-30,confidence_presence,5C construct presence,0.8537735849056604,True,False,False,1.966,1.966,1.88,1.75,1.25,1.36,within_reference
+2021-09-06,confidence_presence,5C construct presence,0.8441558441558441,True,False,False,1.966,1.966,1.59,1.48,1.06,1.12,within_reference
+2021-09-13,confidence_presence,5C construct presence,0.7705479452054794,True,False,False,1.966,1.966,-1.37,-1.24,-0.89,-0.79,within_reference
+2021-09-20,confidence_presence,5C construct presence,0.7760617760617761,False,False,True,1.966,1.966,-1.06,-0.98,-0.7,-0.64,within_reference
+2021-09-27,confidence_presence,5C construct presence,0.8358974358974359,False,True,False,1.966,1.966,1.18,1.1,0.79,0.9,within_reference
+2021-10-04,confidence_presence,5C construct presence,0.8581081081081081,False,True,False,1.966,1.966,1.7,1.62,1.16,1.48,within_reference
+2021-10-11,confidence_presence,5C construct presence,0.7661290322580645,False,False,False,1.966,1.966,-1.01,-0.97,-0.69,-0.9,within_reference
+2021-10-18,confidence_presence,5C construct presence,0.8652482269503546,False,False,False,1.966,1.966,1.88,1.79,1.28,1.66,within_reference
+2021-10-25,confidence_presence,5C construct presence,0.7711442786069652,False,False,False,1.966,1.966,-1.11,-1.04,-0.74,-0.77,within_reference
+2021-11-01,confidence_presence,5C construct presence,0.7989690721649485,False,False,False,1.966,1.966,-0.12,-0.11,-0.08,-0.05,within_reference
+2021-11-08,confidence_presence,5C construct presence,0.7870967741935484,False,False,False,1.966,1.966,-0.48,-0.45,-0.32,-0.36,within_reference
+2021-11-15,confidence_presence,5C construct presence,0.8532608695652174,False,False,False,1.966,1.966,1.73,1.63,1.16,1.35,within_reference
+2021-11-22,confidence_presence,5C construct presence,0.8278688524590164,False,False,False,1.966,1.966,1.0,0.92,0.66,0.7,within_reference
+2021-11-29,confidence_presence,5C construct presence,0.8377192982456141,False,False,False,1.966,1.966,1.34,1.25,0.89,0.95,within_reference
+2021-12-06,confidence_presence,5C construct presence,0.79375,False,False,False,1.966,1.966,-0.27,-0.26,-0.19,-0.19,within_reference
+2021-12-13,confidence_presence,5C construct presence,0.7953020134228188,False,False,False,1.966,1.966,-0.31,-0.28,-0.2,-0.15,within_reference
+2021-12-20,confidence_presence,5C construct presence,0.802158273381295,False,False,False,1.966,1.966,-0.01,-0.01,-0.01,0.03,within_reference
+2021-12-27,confidence_presence,5C construct presence,0.8443396226415094,False,False,False,1.966,1.966,1.53,1.43,1.02,1.12,within_reference
+2021-08-02,confidence_undermining,5C valence prevalence,0.1858974358974359,True,False,False,0.983,1.0,1.22,1.16,1.16,1.31,within_reference
+2021-08-09,confidence_undermining,5C valence prevalence,0.1351351351351351,True,False,False,0.983,1.0,-0.54,-0.51,-0.51,-0.75,within_reference
+2021-08-16,confidence_undermining,5C valence prevalence,0.1527093596059113,True,False,False,0.983,1.0,0.07,0.06,0.06,-0.04,within_reference
+2021-08-23,confidence_undermining,5C valence prevalence,0.1846153846153846,True,False,False,0.983,1.0,1.31,1.23,1.23,1.26,within_reference
+2021-08-30,confidence_undermining,5C valence prevalence,0.1415094339622641,True,False,False,0.983,1.0,-0.39,-0.36,-0.36,-0.49,within_reference
+2021-09-06,confidence_undermining,5C valence prevalence,0.1558441558441558,True,False,False,0.983,1.0,0.21,0.19,0.19,0.09,within_reference
+2021-09-13,confidence_undermining,5C valence prevalence,0.1198630136986301,True,False,False,0.983,1.0,-1.49,-1.36,-1.36,-1.37,within_reference
+2021-09-20,confidence_undermining,5C valence prevalence,0.1351351351351351,False,False,True,0.983,1.0,-0.71,-0.66,-0.66,-0.75,within_reference
+2021-09-27,confidence_undermining,5C valence prevalence,0.3333333333333333,False,True,False,0.983,1.0,7.11,6.67,6.67,7.3,strong_signal_above_999
+2021-10-04,confidence_undermining,5C valence prevalence,0.277027027027027,False,True,False,0.983,1.0,4.28,4.08,4.08,5.01,signal_99to999
+2021-10-11,confidence_undermining,5C valence prevalence,0.1048387096774193,False,False,False,0.983,1.0,-1.44,-1.38,-1.38,-1.98,within_reference
+2021-10-18,confidence_undermining,5C valence prevalence,0.2411347517730496,False,False,False,0.983,1.0,2.99,2.85,2.85,3.55,signal_99to999
+2021-10-25,confidence_undermining,5C valence prevalence,0.1940298507462686,False,False,False,0.983,1.0,1.7,1.6,1.6,1.64,within_reference
+2021-11-01,confidence_undermining,5C valence prevalence,0.1237113402061855,False,False,False,0.983,1.0,-1.06,-1.0,-1.0,-1.22,within_reference
+2021-11-08,confidence_undermining,5C valence prevalence,0.1419354838709677,False,False,False,0.983,1.0,-0.32,-0.3,-0.3,-0.48,within_reference
+2021-11-15,confidence_undermining,5C valence prevalence,0.1413043478260869,False,False,False,0.983,1.0,-0.37,-0.35,-0.35,-0.5,within_reference
+2021-11-22,confidence_undermining,5C valence prevalence,0.1229508196721311,False,False,False,0.983,1.0,-1.22,-1.13,-1.13,-1.25,within_reference
+2021-11-29,confidence_undermining,5C valence prevalence,0.1973684210526315,False,False,False,0.983,1.0,1.96,1.82,1.82,1.78,within_reference
+2021-12-06,confidence_undermining,5C valence prevalence,0.1375,False,False,False,0.983,1.0,-0.48,-0.45,-0.45,-0.66,within_reference
+2021-12-13,confidence_undermining,5C valence prevalence,0.0604026845637583,False,False,False,0.983,1.0,-4.37,-3.98,-3.98,-3.79,within_reference
+2021-12-20,confidence_undermining,5C valence prevalence,0.0863309352517985,False,False,False,0.983,1.0,-3.01,-2.76,-2.76,-2.73,within_reference
+2021-12-27,confidence_undermining,5C valence prevalence,0.1556603773584905,False,False,False,0.983,1.0,0.19,0.18,0.18,0.08,within_reference
+2021-08-02,complacency_presence,5C construct presence,0.5512820512820513,True,False,False,6.462,6.462,-1.7,-1.61,-0.63,-0.85,within_reference
+2021-08-09,complacency_presence,5C construct presence,0.6148648648648649,True,False,False,6.462,6.462,-0.06,-0.06,-0.02,-0.07,within_reference
+2021-08-16,complacency_presence,5C construct presence,0.5763546798029556,True,False,False,6.462,6.462,-1.2,-1.12,-0.44,-0.54,within_reference
+2021-08-23,complacency_presence,5C construct presence,0.6871794871794872,True,False,False,6.462,6.462,2.01,1.88,0.74,0.83,within_reference
+2021-08-30,complacency_presence,5C construct presence,0.6933962264150944,True,False,False,6.462,6.462,2.28,2.13,0.84,0.91,within_reference
+2021-09-06,complacency_presence,5C construct presence,0.7142857142857143,True,False,False,6.462,6.462,3.03,2.82,1.11,1.17,within_reference
+2021-09-13,complacency_presence,5C construct presence,0.5034246575342466,True,False,False,6.462,6.462,-4.0,-3.65,-1.44,-1.45,within_reference
+2021-09-20,complacency_presence,5C construct presence,0.5907335907335908,False,False,True,6.462,6.462,-0.88,-0.81,-0.32,-0.36,within_reference
+2021-09-27,complacency_presence,5C construct presence,0.6,False,True,False,6.462,6.462,-0.5,-0.47,-0.18,-0.25,within_reference
+2021-10-04,complacency_presence,5C construct presence,0.5405405405405406,False,True,False,6.462,6.462,-1.92,-1.83,-0.72,-0.99,within_reference
+2021-10-11,complacency_presence,5C construct presence,0.5080645161290323,False,False,False,6.462,6.462,-2.5,-2.4,-0.94,-1.39,within_reference
+2021-10-18,complacency_presence,5C construct presence,0.6879432624113475,False,False,False,6.462,6.462,1.73,1.65,0.65,0.84,within_reference
+2021-10-25,complacency_presence,5C construct presence,0.6666666666666666,False,False,False,6.462,6.462,1.44,1.35,0.53,0.58,within_reference
+2021-11-01,complacency_presence,5C construct presence,0.711340206185567,False,False,False,6.462,6.462,2.7,2.53,1.0,1.13,within_reference
+2021-11-08,complacency_presence,5C construct presence,0.6838709677419355,False,False,False,6.462,6.462,1.71,1.62,0.64,0.79,within_reference
+2021-11-15,complacency_presence,5C construct presence,0.6739130434782609,False,False,False,6.462,6.462,1.58,1.49,0.59,0.67,within_reference
+2021-11-22,complacency_presence,5C construct presence,0.6352459016393442,False,False,False,6.462,6.462,0.58,0.53,0.21,0.19,within_reference
+2021-11-29,complacency_presence,5C construct presence,0.6228070175438597,False,False,False,6.462,6.462,0.17,0.16,0.06,0.03,within_reference
+2021-12-06,complacency_presence,5C construct presence,0.55625,False,False,False,6.462,6.462,-1.59,-1.51,-0.59,-0.79,within_reference
+2021-12-13,complacency_presence,5C construct presence,0.6241610738255033,False,False,False,6.462,6.462,0.25,0.22,0.09,0.05,within_reference
+2021-12-20,complacency_presence,5C construct presence,0.564748201438849,False,False,False,6.462,6.462,-1.8,-1.65,-0.65,-0.69,within_reference
+2021-12-27,complacency_presence,5C construct presence,0.5943396226415094,False,False,False,6.462,6.462,-0.69,-0.64,-0.25,-0.32,within_reference
+2021-08-02,complacency_undermining,5C valence prevalence,0.0641025641025641,True,False,False,1.24,1.24,-0.14,-0.13,-0.12,-0.18,within_reference
+2021-08-09,complacency_undermining,5C valence prevalence,0.0608108108108108,True,False,False,1.24,1.24,-0.29,-0.28,-0.25,-0.35,within_reference
+2021-08-16,complacency_undermining,5C valence prevalence,0.064039408866995,True,False,False,1.24,1.24,-0.16,-0.15,-0.13,-0.18,within_reference
+2021-08-23,complacency_undermining,5C valence prevalence,0.1025641025641025,True,False,False,1.24,1.24,2.0,1.88,1.69,1.84,within_reference
+2021-08-30,complacency_undermining,5C valence prevalence,0.0471698113207547,True,False,False,1.24,1.24,-1.15,-1.07,-0.96,-1.06,within_reference
+2021-09-06,complacency_undermining,5C valence prevalence,0.0822510822510822,True,False,False,1.24,1.24,0.94,0.87,0.78,0.77,within_reference
+2021-09-13,complacency_undermining,5C valence prevalence,0.0513698630136986,True,False,False,1.24,1.24,-1.06,-0.96,-0.86,-0.84,within_reference
+2021-09-20,complacency_undermining,5C valence prevalence,0.0772200772200772,False,False,True,1.24,1.24,0.67,0.62,0.55,0.51,within_reference
+2021-09-27,complacency_undermining,5C valence prevalence,0.1076923076923077,False,True,False,1.24,1.24,2.29,2.15,1.93,2.11,screening_95to99
+2021-10-04,complacency_undermining,5C valence prevalence,0.1351351351351351,False,True,False,1.24,1.24,3.33,3.17,2.85,3.54,signal_99to999
+2021-10-11,complacency_undermining,5C valence prevalence,0.0564516129032258,False,False,False,1.24,1.24,-0.46,-0.44,-0.4,-0.58,within_reference
+2021-10-18,complacency_undermining,5C valence prevalence,0.0496453900709219,False,False,False,1.24,1.24,-0.82,-0.78,-0.7,-0.93,within_reference
+2021-10-25,complacency_undermining,5C valence prevalence,0.0497512437810945,False,False,False,1.24,1.24,-0.97,-0.91,-0.81,-0.93,within_reference
+2021-11-01,complacency_undermining,5C valence prevalence,0.0412371134020618,False,False,False,1.24,1.24,-1.43,-1.34,-1.2,-1.37,within_reference
+2021-11-08,complacency_undermining,5C valence prevalence,0.064516129032258,False,False,False,1.24,1.24,-0.11,-0.11,-0.1,-0.15,within_reference
+2021-11-15,complacency_undermining,5C valence prevalence,0.0380434782608695,False,False,False,1.24,1.24,-1.56,-1.47,-1.32,-1.54,within_reference
+2021-11-22,complacency_undermining,5C valence prevalence,0.040983606557377,False,False,False,1.24,1.24,-1.62,-1.49,-1.34,-1.39,within_reference
+2021-11-29,complacency_undermining,5C valence prevalence,0.0394736842105263,False,False,False,1.24,1.24,-1.65,-1.54,-1.38,-1.47,within_reference
+2021-12-06,complacency_undermining,5C valence prevalence,0.05,False,False,False,1.24,1.24,-0.85,-0.81,-0.73,-0.91,within_reference
+2021-12-13,complacency_undermining,5C valence prevalence,0.0134228187919463,False,False,False,1.24,1.24,-3.69,-3.36,-3.02,-2.83,within_reference
+2021-12-20,complacency_undermining,5C valence prevalence,0.0107913669064748,False,False,False,1.24,1.24,-3.74,-3.42,-3.07,-2.97,within_reference
+2021-12-27,complacency_undermining,5C valence prevalence,0.0330188679245283,False,False,False,1.24,1.24,-1.97,-1.84,-1.65,-1.8,within_reference
+2021-08-02,constraints_presence,5C construct presence,0.7371794871794872,True,False,False,1.263,1.263,-1.01,-0.96,-0.85,-0.96,within_reference
+2021-08-09,constraints_presence,5C construct presence,0.831081081081081,True,False,False,1.263,1.263,1.74,1.66,1.47,1.74,within_reference
+2021-08-16,constraints_presence,5C construct presence,0.7438423645320197,True,False,False,1.263,1.263,-0.92,-0.86,-0.77,-0.77,within_reference
+2021-08-23,constraints_presence,5C construct presence,0.7589743589743589,True,False,False,1.263,1.263,-0.4,-0.38,-0.34,-0.33,within_reference
+2021-08-30,constraints_presence,5C construct presence,0.7688679245283019,True,False,False,1.263,1.263,-0.08,-0.07,-0.06,-0.05,within_reference
+2021-09-06,constraints_presence,5C construct presence,0.7489177489177489,True,False,False,1.263,1.263,-0.8,-0.74,-0.66,-0.62,within_reference
+2021-09-13,constraints_presence,5C construct presence,0.8047945205479452,True,False,False,1.263,1.263,1.37,1.25,1.11,0.98,within_reference
+2021-09-20,constraints_presence,5C construct presence,0.7722007722007722,False,False,True,1.263,1.263,0.04,0.04,0.04,0.05,within_reference
+2021-09-27,constraints_presence,5C construct presence,0.717948717948718,False,True,False,1.263,1.263,-1.76,-1.66,-1.47,-1.51,within_reference
+2021-10-04,constraints_presence,5C construct presence,0.6824324324324325,False,True,False,1.263,1.263,-2.57,-2.44,-2.17,-2.53,within_reference
+2021-10-11,constraints_presence,5C construct presence,0.6693548387096774,False,False,False,1.263,1.263,-2.7,-2.59,-2.3,-2.91,within_reference
+2021-10-18,constraints_presence,5C construct presence,0.75177304964539,False,False,False,1.263,1.263,-0.54,-0.52,-0.46,-0.54,within_reference
+2021-10-25,constraints_presence,5C construct presence,0.6417910447761194,False,False,False,1.263,1.263,-4.36,-4.09,-3.64,-3.7,within_reference
+2021-11-01,constraints_presence,5C construct presence,0.788659793814433,False,False,False,1.263,1.263,0.58,0.55,0.49,0.52,within_reference
+2021-11-08,constraints_presence,5C construct presence,0.7419354838709677,False,False,False,1.263,1.263,-0.86,-0.82,-0.73,-0.82,within_reference
+2021-11-15,constraints_presence,5C construct presence,0.6956521739130435,False,False,False,1.263,1.263,-2.43,-2.29,-2.04,-2.15,within_reference
+2021-11-22,constraints_presence,5C construct presence,0.7131147540983607,False,False,False,1.263,1.263,-2.15,-1.99,-1.77,-1.65,within_reference
+2021-11-29,constraints_presence,5C construct presence,0.7017543859649122,False,False,False,1.263,1.263,-2.49,-2.31,-2.06,-1.98,within_reference
+2021-12-06,constraints_presence,5C construct presence,0.7,False,False,False,1.263,1.263,-2.14,-2.03,-1.81,-2.03,within_reference
+2021-12-13,constraints_presence,5C construct presence,0.8322147651006712,False,False,False,1.263,1.263,2.51,2.29,2.04,1.77,within_reference
+2021-12-20,constraints_presence,5C construct presence,0.6870503597122302,False,False,False,1.263,1.263,-3.33,-3.05,-2.72,-2.4,within_reference
+2021-12-27,constraints_presence,5C construct presence,0.7547169811320755,False,False,False,1.263,1.263,-0.57,-0.53,-0.47,-0.45,within_reference
+2021-08-02,constraints_undermining,5C valence prevalence,0.1538461538461538,True,False,False,2.874,2.874,-2.23,-2.12,-1.25,-1.38,within_reference
+2021-08-09,constraints_undermining,5C valence prevalence,0.2027027027027027,True,False,False,2.874,2.874,-0.76,-0.72,-0.43,-0.44,within_reference
+2021-08-16,constraints_undermining,5C valence prevalence,0.3004926108374384,True,False,False,2.874,2.874,2.43,2.27,1.34,1.44,within_reference
+2021-08-23,constraints_undermining,5C valence prevalence,0.282051282051282,True,False,False,2.874,2.874,1.76,1.66,0.98,1.08,within_reference
+2021-08-30,constraints_undermining,5C valence prevalence,0.2028301886792453,True,False,False,2.874,2.874,-0.91,-0.84,-0.5,-0.44,within_reference
+2021-09-06,constraints_undermining,5C valence prevalence,0.1948051948051948,True,False,False,2.874,2.874,-1.24,-1.15,-0.68,-0.59,within_reference
+2021-09-13,constraints_undermining,5C valence prevalence,0.2431506849315068,True,False,False,2.874,2.874,0.58,0.53,0.31,0.34,within_reference
+2021-09-20,constraints_undermining,5C valence prevalence,0.2509652509652509,False,False,True,2.874,2.874,0.84,0.78,0.46,0.49,within_reference
+2021-09-27,constraints_undermining,5C valence prevalence,0.3128205128205128,False,True,False,2.874,2.874,2.79,2.62,1.54,1.67,within_reference
+2021-10-04,constraints_undermining,5C valence prevalence,0.277027027027027,False,True,False,2.874,2.874,1.39,1.33,0.78,0.99,within_reference
+2021-10-11,constraints_undermining,5C valence prevalence,0.1451612903225806,False,False,False,2.874,2.874,-2.22,-2.13,-1.26,-1.55,within_reference
+2021-10-18,constraints_undermining,5C valence prevalence,0.2978723404255319,False,False,False,2.874,2.874,1.95,1.86,1.1,1.39,within_reference
+2021-10-25,constraints_undermining,5C valence prevalence,0.154228855721393,False,False,False,2.874,2.874,-2.52,-2.36,-1.39,-1.37,within_reference
+2021-11-01,constraints_undermining,5C valence prevalence,0.2525773195876288,False,False,False,2.874,2.874,0.78,0.74,0.43,0.52,within_reference
+2021-11-08,constraints_undermining,5C valence prevalence,0.2258064516129032,False,False,False,2.874,2.874,-0.09,-0.09,-0.05,0.0,within_reference
+2021-11-15,constraints_undermining,5C valence prevalence,0.1576086956521739,False,False,False,2.874,2.874,-2.3,-2.17,-1.28,-1.31,within_reference
+2021-11-22,constraints_undermining,5C valence prevalence,0.1680327868852459,False,False,False,2.874,2.874,-2.26,-2.09,-1.24,-1.11,within_reference
+2021-11-29,constraints_undermining,5C valence prevalence,0.1973684210526315,False,False,False,2.874,2.874,-1.13,-1.05,-0.62,-0.54,within_reference
+2021-12-06,constraints_undermining,5C valence prevalence,0.1875,False,False,False,2.874,2.874,-1.25,-1.18,-0.7,-0.73,within_reference
+2021-12-13,constraints_undermining,5C valence prevalence,0.0503355704697986,False,False,False,2.874,2.874,-7.34,-6.68,-3.94,-3.37,within_reference
+2021-12-20,constraints_undermining,5C valence prevalence,0.1079136690647482,False,False,False,2.874,2.874,-4.8,-4.4,-2.59,-2.26,within_reference
+2021-12-27,constraints_undermining,5C valence prevalence,0.2028301886792453,False,False,False,2.874,2.874,-0.91,-0.84,-0.5,-0.44,within_reference
+2021-08-02,calculation_presence,5C construct presence,0.173076923076923,True,False,False,1.487,1.487,-1.53,-1.45,-1.19,-1.3,within_reference
+2021-08-09,calculation_presence,5C construct presence,0.1891891891891892,True,False,False,1.487,1.487,-1.02,-0.97,-0.79,-0.87,within_reference
+2021-08-16,calculation_presence,5C construct presence,0.2561576354679803,True,False,False,1.487,1.487,1.1,1.03,0.84,0.94,within_reference
+2021-08-23,calculation_presence,5C construct presence,0.2564102564102564,True,False,False,1.487,1.487,1.08,1.02,0.83,0.95,within_reference
+2021-08-30,calculation_presence,5C construct presence,0.1981132075471698,True,False,False,1.487,1.487,-0.91,-0.85,-0.69,-0.63,within_reference
+2021-09-06,calculation_presence,5C construct presence,0.264069264069264,True,False,False,1.487,1.487,1.46,1.35,1.11,1.15,within_reference
+2021-09-13,calculation_presence,5C construct presence,0.2123287671232876,True,False,False,1.487,1.487,-0.48,-0.44,-0.36,-0.24,within_reference
+2021-09-20,calculation_presence,5C construct presence,0.2432432432432432,False,False,True,1.487,1.487,0.74,0.68,0.56,0.59,within_reference
+2021-09-27,calculation_presence,5C construct presence,0.3435897435897436,False,True,False,1.487,1.487,4.0,3.76,3.08,3.3,screening_95to99
+2021-10-04,calculation_presence,5C construct presence,0.3581081081081081,False,True,False,1.487,1.487,3.91,3.72,3.05,3.69,signal_99to999
+2021-10-11,calculation_presence,5C construct presence,0.2096774193548387,False,False,False,1.487,1.487,-0.38,-0.37,-0.3,-0.31,within_reference
+2021-10-18,calculation_presence,5C construct presence,0.1702127659574468,False,False,False,1.487,1.487,-1.53,-1.46,-1.2,-1.38,within_reference
+2021-10-25,calculation_presence,5C construct presence,0.1791044776119403,False,False,False,1.487,1.487,-1.53,-1.43,-1.17,-1.14,within_reference
+2021-11-01,calculation_presence,5C construct presence,0.1701030927835051,False,False,False,1.487,1.487,-1.8,-1.69,-1.39,-1.38,within_reference
+2021-11-08,calculation_presence,5C construct presence,0.1870967741935484,False,False,False,1.487,1.487,-1.1,-1.05,-0.86,-0.92,within_reference
+2021-11-15,calculation_presence,5C construct presence,0.1956521739130435,False,False,False,1.487,1.487,-0.92,-0.87,-0.71,-0.69,within_reference
+2021-11-22,calculation_presence,5C construct presence,0.2459016393442623,False,False,False,1.487,1.487,0.82,0.76,0.62,0.66,within_reference
+2021-11-29,calculation_presence,5C construct presence,0.2368421052631578,False,False,False,1.487,1.487,0.46,0.43,0.35,0.42,within_reference
+2021-12-06,calculation_presence,5C construct presence,0.18125,False,False,False,1.487,1.487,-1.3,-1.23,-1.01,-1.08,within_reference
+2021-12-13,calculation_presence,5C construct presence,0.0973154362416107,False,False,False,1.487,1.487,-5.25,-4.78,-3.92,-3.34,within_reference
+2021-12-20,calculation_presence,5C construct presence,0.1007194244604316,False,False,False,1.487,1.487,-4.93,-4.52,-3.7,-3.25,within_reference
+2021-12-27,calculation_presence,5C construct presence,0.1745283018867924,False,False,False,1.487,1.487,-1.73,-1.62,-1.32,-1.26,within_reference
+2021-08-02,calculation_undermining,5C valence prevalence,0.0769230769230769,True,False,False,1.348,1.348,-0.33,-0.31,-0.27,-0.35,within_reference
+2021-08-09,calculation_undermining,5C valence prevalence,0.0878378378378378,True,False,False,1.348,1.348,0.16,0.15,0.13,0.13,within_reference
+2021-08-16,calculation_undermining,5C valence prevalence,0.0935960591133004,True,False,False,1.348,1.348,0.48,0.45,0.39,0.39,within_reference
+2021-08-23,calculation_undermining,5C valence prevalence,0.123076923076923,True,False,False,1.348,1.348,1.95,1.83,1.58,1.69,within_reference
+2021-08-30,calculation_undermining,5C valence prevalence,0.0471698113207547,True,False,False,1.348,1.348,-1.94,-1.81,-1.56,-1.67,within_reference
+2021-09-06,calculation_undermining,5C valence prevalence,0.0865800865800865,True,False,False,1.348,1.348,0.13,0.12,0.1,0.08,within_reference
+2021-09-13,calculation_undermining,5C valence prevalence,0.0787671232876712,True,False,False,1.348,1.348,-0.33,-0.3,-0.26,-0.27,within_reference
+2021-09-20,calculation_undermining,5C valence prevalence,0.0694980694980695,False,False,True,1.348,1.348,-0.85,-0.78,-0.68,-0.68,within_reference
+2021-09-27,calculation_undermining,5C valence prevalence,0.1589743589743589,False,True,False,1.348,1.348,3.76,3.53,3.04,3.28,screening_95to99
+2021-10-04,calculation_undermining,5C valence prevalence,0.1621621621621621,False,True,False,1.348,1.348,3.42,3.25,2.8,3.42,signal_99to999
+2021-10-11,calculation_undermining,5C valence prevalence,0.064516129032258,False,False,False,1.348,1.348,-0.79,-0.76,-0.65,-0.9,within_reference
+2021-10-18,calculation_undermining,5C valence prevalence,0.0780141843971631,False,False,False,1.348,1.348,-0.26,-0.25,-0.22,-0.3,within_reference
+2021-10-25,calculation_undermining,5C valence prevalence,0.0746268656716417,False,False,False,1.348,1.348,-0.49,-0.46,-0.39,-0.45,within_reference
+2021-11-01,calculation_undermining,5C valence prevalence,0.0515463917525773,False,False,False,1.348,1.348,-1.64,-1.54,-1.32,-1.47,within_reference
+2021-11-08,calculation_undermining,5C valence prevalence,0.0774193548387096,False,False,False,1.348,1.348,-0.3,-0.29,-0.25,-0.33,within_reference
+2021-11-15,calculation_undermining,5C valence prevalence,0.0652173913043478,False,False,False,1.348,1.348,-0.93,-0.87,-0.75,-0.87,within_reference
+2021-11-22,calculation_undermining,5C valence prevalence,0.0696721311475409,False,False,False,1.348,1.348,-0.82,-0.76,-0.65,-0.67,within_reference
+2021-11-29,calculation_undermining,5C valence prevalence,0.0745614035087719,False,False,False,1.348,1.348,-0.52,-0.49,-0.42,-0.45,within_reference
+2021-12-06,calculation_undermining,5C valence prevalence,0.0625,False,False,False,1.348,1.348,-0.99,-0.94,-0.81,-0.99,within_reference
+2021-12-13,calculation_undermining,5C valence prevalence,0.0302013422818791,False,False,False,1.348,1.348,-3.36,-3.06,-2.63,-2.42,within_reference
+2021-12-20,calculation_undermining,5C valence prevalence,0.014388489208633,False,False,False,1.348,1.348,-4.19,-3.84,-3.31,-3.12,within_reference
+2021-12-27,calculation_undermining,5C valence prevalence,0.0471698113207547,False,False,False,1.348,1.348,-1.94,-1.81,-1.56,-1.67,within_reference
+2021-08-02,collective_responsibility_presence,5C construct presence,0.3141025641025641,True,False,False,3.361,3.361,-1.92,-1.82,-0.99,-1.18,within_reference
+2021-08-09,collective_responsibility_presence,5C construct presence,0.3581081081081081,True,False,False,3.361,3.361,-0.77,-0.73,-0.4,-0.46,within_reference
+2021-08-16,collective_responsibility_presence,5C construct presence,0.3940886699507389,True,False,False,3.361,3.361,0.15,0.14,0.08,0.13,within_reference
+2021-08-23,collective_responsibility_presence,5C construct presence,0.3692307692307692,True,False,False,3.361,3.361,-0.57,-0.53,-0.29,-0.28,within_reference
+2021-08-30,collective_responsibility_presence,5C construct presence,0.4481132075471698,True,False,False,3.361,3.361,1.77,1.65,0.9,1.01,within_reference
+2021-09-06,collective_responsibility_presence,5C construct presence,0.4848484848484848,True,False,False,3.361,3.361,2.99,2.77,1.51,1.61,within_reference
+2021-09-13,collective_responsibility_presence,5C construct presence,0.3356164383561644,True,False,False,3.361,3.361,-1.87,-1.71,-0.93,-0.83,within_reference
+2021-09-20,collective_responsibility_presence,5C construct presence,0.4247104247104247,False,False,True,3.361,3.361,1.18,1.08,0.59,0.63,within_reference
+2021-09-27,collective_responsibility_presence,5C construct presence,0.2769230769230769,False,True,False,3.361,3.361,-3.21,-3.01,-1.64,-1.79,within_reference
+2021-10-04,collective_responsibility_presence,5C construct presence,0.2972972972972973,False,True,False,3.361,3.361,-2.29,-2.18,-1.19,-1.45,within_reference
+2021-10-11,collective_responsibility_presence,5C construct presence,0.3709677419354839,False,False,False,3.361,3.361,-0.41,-0.4,-0.22,-0.25,within_reference
+2021-10-18,collective_responsibility_presence,5C construct presence,0.3333333333333333,False,False,False,3.361,3.361,-1.36,-1.29,-0.71,-0.87,within_reference
+2021-10-25,collective_responsibility_presence,5C construct presence,0.3681592039800995,False,False,False,3.361,3.361,-0.61,-0.57,-0.31,-0.3,within_reference
+2021-11-01,collective_responsibility_presence,5C construct presence,0.4123711340206185,False,False,False,3.361,3.361,0.67,0.63,0.34,0.43,within_reference
+2021-11-08,collective_responsibility_presence,5C construct presence,0.3741935483870968,False,False,False,3.361,3.361,-0.38,-0.36,-0.2,-0.2,within_reference
+2021-11-15,collective_responsibility_presence,5C construct presence,0.4510869565217391,False,False,False,3.361,3.361,1.73,1.63,0.89,1.06,within_reference
+2021-11-22,collective_responsibility_presence,5C construct presence,0.3524590163934426,False,False,False,3.361,3.361,-1.17,-1.08,-0.59,-0.55,within_reference
+2021-11-29,collective_responsibility_presence,5C construct presence,0.3508771929824561,False,False,False,3.361,3.361,-1.18,-1.1,-0.6,-0.58,within_reference
+2021-12-06,collective_responsibility_presence,5C construct presence,0.325,False,False,False,3.361,3.361,-1.66,-1.58,-0.86,-1.0,within_reference
+2021-12-13,collective_responsibility_presence,5C construct presence,0.412751677852349,False,False,False,3.361,3.361,0.84,0.77,0.42,0.43,within_reference
+2021-12-20,collective_responsibility_presence,5C construct presence,0.381294964028777,False,False,False,3.361,3.361,-0.26,-0.24,-0.13,-0.08,within_reference
+2021-12-27,collective_responsibility_presence,5C construct presence,0.4245283018867924,False,False,False,3.361,3.361,1.06,0.99,0.54,0.62,within_reference
+2021-08-02,collective_responsibility_undermining,5C valence prevalence,0.0,True,False,False,1.92,1.92,-1.76,-1.67,-1.21,-1.34,within_reference
+2021-08-09,collective_responsibility_undermining,5C valence prevalence,0.0135135135135135,True,False,False,1.92,1.92,-0.53,-0.5,-0.36,-0.37,within_reference
+2021-08-16,collective_responsibility_undermining,5C valence prevalence,0.0443349753694581,True,False,False,1.92,1.92,2.56,2.4,1.73,1.83,within_reference
+2021-08-23,collective_responsibility_undermining,5C valence prevalence,0.0256410256410256,True,False,False,1.92,1.92,0.62,0.58,0.42,0.5,within_reference
+2021-08-30,collective_responsibility_undermining,5C valence prevalence,0.0094339622641509,True,False,False,1.92,1.92,-1.06,-0.99,-0.71,-0.66,within_reference
+2021-09-06,collective_responsibility_undermining,5C valence prevalence,0.0173160173160173,True,False,False,1.92,1.92,-0.24,-0.22,-0.16,-0.1,within_reference
+2021-09-13,collective_responsibility_undermining,5C valence prevalence,0.0205479452054794,True,False,False,1.92,1.92,0.13,0.12,0.09,0.13,within_reference
+2021-09-20,collective_responsibility_undermining,5C valence prevalence,0.0386100386100386,False,False,True,1.92,1.92,2.23,2.05,1.48,1.43,within_reference
+2021-09-27,collective_responsibility_undermining,5C valence prevalence,0.0358974358974358,False,True,False,1.92,1.92,1.66,1.56,1.12,1.23,within_reference
+2021-10-04,collective_responsibility_undermining,5C valence prevalence,0.0337837837837837,False,True,False,1.92,1.92,1.26,1.2,0.86,1.08,within_reference
+2021-10-11,collective_responsibility_undermining,5C valence prevalence,0.0161290322580645,False,False,False,1.92,1.92,-0.27,-0.26,-0.19,-0.18,within_reference
+2021-10-18,collective_responsibility_undermining,5C valence prevalence,0.0070921985815602,False,False,False,1.92,1.92,-1.06,-1.02,-0.73,-0.83,within_reference
+2021-10-25,collective_responsibility_undermining,5C valence prevalence,0.0199004975124378,False,False,False,1.92,1.92,0.04,0.04,0.03,0.09,within_reference
+2021-11-01,collective_responsibility_undermining,5C valence prevalence,0.0154639175257731,False,False,False,1.92,1.92,-0.41,-0.38,-0.27,-0.23,within_reference
+2021-11-08,collective_responsibility_undermining,5C valence prevalence,0.0258064516129032,False,False,False,1.92,1.92,0.57,0.54,0.39,0.51,within_reference
+2021-11-15,collective_responsibility_undermining,5C valence prevalence,0.0108695652173913,False,False,False,1.92,1.92,-0.85,-0.8,-0.57,-0.56,within_reference
+2021-11-22,collective_responsibility_undermining,5C valence prevalence,0.0081967213114754,False,False,False,1.92,1.92,-1.28,-1.18,-0.85,-0.75,within_reference
+2021-11-29,collective_responsibility_undermining,5C valence prevalence,0.0087719298245614,False,False,False,1.92,1.92,-1.17,-1.09,-0.78,-0.71,within_reference
+2021-12-06,collective_responsibility_undermining,5C valence prevalence,0.00625,False,False,False,1.92,1.92,-1.21,-1.15,-0.83,-0.89,within_reference
+2021-12-13,collective_responsibility_undermining,5C valence prevalence,0.0100671140939597,False,False,False,1.92,1.92,-1.18,-1.07,-0.77,-0.62,within_reference
+2021-12-20,collective_responsibility_undermining,5C valence prevalence,0.0,False,False,False,1.92,1.92,-2.35,-2.15,-1.55,-1.34,within_reference
+2021-12-27,collective_responsibility_undermining,5C valence prevalence,0.0141509433962264,False,False,False,1.92,1.92,-0.56,-0.52,-0.38,-0.32,within_reference

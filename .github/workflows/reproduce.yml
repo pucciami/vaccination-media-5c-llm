@@ -1,0 +1,32 @@
+name: reproduce
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt pyyaml
+      - name: Check the citation and deposit metadata parse
+        run: |
+          python - <<'PY'
+          import json, yaml
+          cff = yaml.safe_load(open("CITATION.cff", encoding="utf-8"))
+          missing = [k for k in ("cff-version", "message", "title", "authors") if k not in cff]
+          assert not missing, f"CITATION.cff lacks {missing}"
+          assert all("family-names" in a and "given-names" in a for a in cff["authors"]), "author names"
+          zen = json.load(open(".zenodo.json", encoding="utf-8"))
+          assert zen["version"] == cff["version"], "version differs between CITATION.cff and .zenodo.json"
+          print("CITATION.cff and .zenodo.json parse; version", cff["version"])
+          PY
+      - name: Recompute the published numbers and check them against the article
+        run: python reproduce.py
+      - name: Build the synthetic example input
+        run: python examples/build_example_input.py

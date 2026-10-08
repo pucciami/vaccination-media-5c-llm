@@ -1,0 +1,2322 @@
+{
+  "note": "Values as printed in the article and its supplement (three decimals; z and prediction limits to two; p-values to the printed precision). reproduce.py recomputes them from data/ and compares.",
+  "checks": [
+    {
+      "label": "Qwen3-32B pipeline, relevance accuracy",
+      "source": "wilson",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "point_estimate": 0.97,
+        "ci_low": 0.915,
+        "ci_high": 0.99
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, construct macro-F1",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.752,
+        "ci_low": 0.657,
+        "ci_high": 0.815
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, construct micro-F1",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.809,
+        "ci_low": 0.759,
+        "ci_high": 0.852
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, relevance accuracy",
+      "source": "wilson",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "point_estimate": 0.75,
+        "ci_low": 0.657,
+        "ci_high": 0.825
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, construct macro-F1",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.356,
+        "ci_low": 0.259,
+        "ci_high": 0.462
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, construct micro-F1",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.516,
+        "ci_low": 0.447,
+        "ci_high": 0.58
+      }
+    },
+    {
+      "label": "Macro-F1 gain, active learning minus base (Qwen3-32B)",
+      "source": "paired",
+      "where": {
+        "comparison": "G0_E2_minus_G0_E0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": 0.21,
+        "ci_low": 0.078,
+        "ci_high": 0.343
+      }
+    },
+    {
+      "label": "Macro-F1 gap, Qwen3-32B minus Apertus-8B",
+      "source": "paired",
+      "where": {
+        "comparison": "G0_E2_minus_A0_F2",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": 0.396,
+        "ci_low": 0.283,
+        "ci_high": 0.504
+      }
+    },
+    {
+      "label": "Event week 27 Sep 2021, Confidence-undermining",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "value": 0.333,
+        "z_recomputed": 7.3
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Macro-F1 step, supervised minus base (Qwen3-32B)",
+      "source": "paired",
+      "where": {
+        "comparison": "G0_E1_minus_G0_E0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": 0.117,
+        "ci_low": 0.004,
+        "ci_high": 0.239
+      }
+    },
+    {
+      "label": "Macro-F1 step, active learning minus supervised (Qwen3-32B)",
+      "source": "paired",
+      "where": {
+        "comparison": "G0_E2_minus_G0_E1",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": 0.093,
+        "ci_low": -0.002,
+        "ci_high": 0.202
+      }
+    },
+    {
+      "label": "Macro-F1 step, supervised minus base (Apertus-8B)",
+      "source": "paired",
+      "where": {
+        "comparison": "A0_F1_minus_A0_F0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": -0.146,
+        "ci_low": -0.213,
+        "ci_high": -0.072
+      }
+    },
+    {
+      "label": "Macro-F1 step, active learning minus supervised (Apertus-8B)",
+      "source": "paired",
+      "where": {
+        "comparison": "A0_F2_minus_A0_F1",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": 0.058,
+        "ci_low": -0.023,
+        "ci_high": 0.161
+      }
+    },
+    {
+      "label": "Macro-F1 change, active learning minus base (Apertus-8B)",
+      "source": "paired",
+      "where": {
+        "comparison": "A0_F2_minus_A0_F0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": -0.088,
+        "ci_low": -0.199,
+        "ci_high": 0.038
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, disease accuracy (74 reference-relevant)",
+      "source": "wilson",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.905,
+        "ci_low": 0.817,
+        "ci_high": 0.953,
+        "successes": 67,
+        "n": 74
+      }
+    },
+    {
+      "label": "Table S3, Complacency valence accuracy",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_accuracy_when_gold_present",
+        "construct": "complacency"
+      },
+      "values": {
+        "point_estimate": 0.842,
+        "ci_low": 0.696,
+        "ci_high": 0.926,
+        "successes": 32,
+        "n": 38
+      }
+    },
+    {
+      "label": "Table S3, Complacency majority-class baseline",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_majority_class_baseline",
+        "construct": "complacency"
+      },
+      "values": {
+        "point_estimate": 0.947,
+        "successes": 36,
+        "n": 38
+      }
+    },
+    {
+      "label": "Table S3, Confidence valence accuracy",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_accuracy_when_gold_present",
+        "construct": "confidence"
+      },
+      "values": {
+        "point_estimate": 0.837,
+        "ci_low": 0.71,
+        "ci_high": 0.915,
+        "successes": 41,
+        "n": 49
+      }
+    },
+    {
+      "label": "Table S3, Confidence majority-class baseline",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_majority_class_baseline",
+        "construct": "confidence"
+      },
+      "values": {
+        "point_estimate": 0.837,
+        "successes": 41,
+        "n": 49
+      }
+    },
+    {
+      "label": "Table S3, Constraints valence accuracy",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_accuracy_when_gold_present",
+        "construct": "constraints"
+      },
+      "values": {
+        "point_estimate": 0.61,
+        "ci_low": 0.457,
+        "ci_high": 0.743,
+        "successes": 25,
+        "n": 41
+      }
+    },
+    {
+      "label": "Table S3, Constraints majority-class baseline",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_majority_class_baseline",
+        "construct": "constraints"
+      },
+      "values": {
+        "point_estimate": 0.683,
+        "successes": 28,
+        "n": 41
+      }
+    },
+    {
+      "label": "Table S3, Collective Responsibility valence accuracy",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_accuracy_when_gold_present",
+        "construct": "collective_responsibility"
+      },
+      "values": {
+        "point_estimate": 0.688,
+        "ci_low": 0.444,
+        "ci_high": 0.858,
+        "successes": 11,
+        "n": 16
+      }
+    },
+    {
+      "label": "Table S3, Collective Responsibility majority-class baseline",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_majority_class_baseline",
+        "construct": "collective_responsibility"
+      },
+      "values": {
+        "point_estimate": 0.875,
+        "successes": 14,
+        "n": 16
+      }
+    },
+    {
+      "label": "Table S3, Calculation valence accuracy",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_accuracy_when_gold_present",
+        "construct": "calculation"
+      },
+      "values": {
+        "point_estimate": 0.6,
+        "ci_low": 0.231,
+        "ci_high": 0.882,
+        "successes": 3,
+        "n": 5
+      }
+    },
+    {
+      "label": "Table S3, Calculation majority-class baseline",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "valence_majority_class_baseline",
+        "construct": "calculation"
+      },
+      "values": {
+        "point_estimate": 0.6,
+        "successes": 3,
+        "n": 5
+      }
+    },
+    {
+      "label": "Table S4, Confidence undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "confidence"
+      },
+      "values": {
+        "point_estimate": 0.333,
+        "ci_low": 0.097,
+        "ci_high": 0.7,
+        "successes": 2,
+        "n": 6
+      }
+    },
+    {
+      "label": "Table S4, Confidence undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "confidence"
+      },
+      "values": {
+        "point_estimate": 0.5,
+        "ci_low": 0.15,
+        "ci_high": 0.85,
+        "successes": 2,
+        "n": 4
+      }
+    },
+    {
+      "label": "Table S4, Complacency undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "complacency"
+      },
+      "values": {
+        "point_estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.793,
+        "successes": 0,
+        "n": 1
+      }
+    },
+    {
+      "label": "Table S4, Complacency undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "complacency"
+      },
+      "values": {
+        "point_estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.793,
+        "successes": 0,
+        "n": 1
+      }
+    },
+    {
+      "label": "Table S4, Constraints undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "constraints"
+      },
+      "values": {
+        "point_estimate": 0.3,
+        "ci_low": 0.108,
+        "ci_high": 0.603,
+        "successes": 3,
+        "n": 10
+      }
+    },
+    {
+      "label": "Table S4, Constraints undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "constraints"
+      },
+      "values": {
+        "point_estimate": 0.25,
+        "ci_low": 0.089,
+        "ci_high": 0.532,
+        "successes": 3,
+        "n": 12
+      }
+    },
+    {
+      "label": "Table S4, Calculation undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "calculation"
+      },
+      "values": {
+        "point_estimate": 1.0,
+        "ci_low": 0.207,
+        "ci_high": 1.0,
+        "successes": 1,
+        "n": 1
+      }
+    },
+    {
+      "label": "Table S4, Calculation undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "calculation"
+      },
+      "values": {
+        "point_estimate": 0.5,
+        "ci_low": 0.095,
+        "ci_high": 0.905,
+        "successes": 1,
+        "n": 2
+      }
+    },
+    {
+      "label": "Table S4, Collective Responsibility undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "collective_responsibility"
+      },
+      "values": {
+        "point_estimate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.793,
+        "successes": 0,
+        "n": 1
+      }
+    },
+    {
+      "label": "Table S4, Collective Responsibility undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "collective_responsibility"
+      },
+      "values": {
+        "successes": 0,
+        "n": 0
+      }
+    },
+    {
+      "label": "Table S4, pooled (article-level bootstrap) undermining recall",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_recall",
+        "construct": "pooled"
+      },
+      "values": {
+        "point_estimate": 0.316,
+        "ci_low": 0.083,
+        "ci_high": 0.556,
+        "successes": 6,
+        "n": 19
+      }
+    },
+    {
+      "label": "Table S4, pooled (article-level bootstrap) undermining precision",
+      "source": "valence",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "undermining_precision",
+        "construct": "pooled"
+      },
+      "values": {
+        "point_estimate": 0.316,
+        "ci_low": 0.091,
+        "ci_high": 0.524,
+        "successes": 6,
+        "n": 19
+      }
+    },
+    {
+      "label": "Event week 4 Oct 2021, Confidence-undermining",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "z_recomputed": 5.01
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Confidence-undermining one-sided p",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "p_one_sided": 0.0002
+      },
+      "tolerance": 5e-05
+    },
+    {
+      "label": "Event week 27 Sep 2021, Confidence-undermining p x 26 (Bonferroni)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "p_bonferroni_26": 0.006
+      },
+      "tolerance": 0.0005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Confidence-undermining one-sided p",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "p_one_sided": 0.0017
+      },
+      "tolerance": 5e-05
+    },
+    {
+      "label": "Event week 4 Oct 2021, Confidence-undermining p x 26 (Bonferroni)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "p_bonferroni_26": 0.044
+      },
+      "tolerance": 0.0005
+    },
+    {
+      "label": "Prediction limit, one-sided 95%",
+      "source": "event_limits",
+      "where": {
+        "limit": "one_sided_95"
+      },
+      "values": {
+        "sd_units": 2.08
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Prediction limit, one-sided 99%",
+      "source": "event_limits",
+      "where": {
+        "limit": "one_sided_99"
+      },
+      "values": {
+        "sd_units": 3.36
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Prediction limit, one-sided 99.9%",
+      "source": "event_limits",
+      "where": {
+        "limit": "one_sided_99.9"
+      },
+      "values": {
+        "sd_units": 5.57
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Prediction limit, Bonferroni (26 indicator-weeks)",
+      "source": "event_limits",
+      "where": {
+        "limit": "bonferroni_26"
+      },
+      "values": {
+        "sd_units": 4.88
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, relevance, relevance",
+      "source": "agreement",
+      "where": {
+        "level": "Relevance",
+        "field": "relevance"
+      },
+      "values": {
+        "n": 400,
+        "percent_agreement": 0.86,
+        "kappa": 0.7,
+        "ci_low": 0.63,
+        "ci_high": 0.77
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, primary disease, disease",
+      "source": "agreement",
+      "where": {
+        "level": "Primary disease",
+        "field": "disease"
+      },
+      "values": {
+        "n": 212,
+        "percent_agreement": 0.94,
+        "kappa": 0.91,
+        "ci_low": 0.86,
+        "ci_high": 0.95
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, any-5c presence, has_relevant_5c",
+      "source": "agreement",
+      "where": {
+        "level": "Any-5C presence",
+        "field": "has_relevant_5c"
+      },
+      "values": {
+        "n": 222,
+        "percent_agreement": 0.91,
+        "kappa": 0.61,
+        "ci_low": 0.45,
+        "ci_high": 0.75
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct presence, Confidence",
+      "source": "agreement",
+      "where": {
+        "level": "Construct presence",
+        "field": "Confidence"
+      },
+      "values": {
+        "n": 180,
+        "percent_agreement": 0.76,
+        "kappa": 0.46,
+        "ci_low": 0.32,
+        "ci_high": 0.59
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct presence, Complacency",
+      "source": "agreement",
+      "where": {
+        "level": "Construct presence",
+        "field": "Complacency"
+      },
+      "values": {
+        "n": 180,
+        "percent_agreement": 0.78,
+        "kappa": 0.51,
+        "ci_low": 0.37,
+        "ci_high": 0.64
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct presence, Constraints",
+      "source": "agreement",
+      "where": {
+        "level": "Construct presence",
+        "field": "Constraints"
+      },
+      "values": {
+        "n": 180,
+        "percent_agreement": 0.83,
+        "kappa": 0.64,
+        "ci_low": 0.52,
+        "ci_high": 0.75
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct presence, Calculation",
+      "source": "agreement",
+      "where": {
+        "level": "Construct presence",
+        "field": "Calculation"
+      },
+      "values": {
+        "n": 180,
+        "percent_agreement": 0.98,
+        "kappa": 0.94,
+        "ci_low": 0.86,
+        "ci_high": 1.0
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct presence, Collective Responsibility",
+      "source": "agreement",
+      "where": {
+        "level": "Construct presence",
+        "field": "Collective Responsibility"
+      },
+      "values": {
+        "n": 180,
+        "percent_agreement": 0.91,
+        "kappa": 0.58,
+        "ci_low": 0.38,
+        "ci_high": 0.75
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct valence, Confidence",
+      "source": "agreement",
+      "where": {
+        "level": "Construct valence",
+        "field": "Confidence"
+      },
+      "values": {
+        "n": 98,
+        "percent_agreement": 0.9,
+        "kappa": 0.7,
+        "ci_low": 0.53,
+        "ci_high": 0.86
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct valence, Complacency",
+      "source": "agreement",
+      "where": {
+        "level": "Construct valence",
+        "field": "Complacency"
+      },
+      "values": {
+        "n": 41,
+        "percent_agreement": 0.95,
+        "kappa": 0.69,
+        "ci_low": 0.0,
+        "ci_high": 1.0
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct valence, Constraints",
+      "source": "agreement",
+      "where": {
+        "level": "Construct valence",
+        "field": "Constraints"
+      },
+      "values": {
+        "n": 52,
+        "percent_agreement": 0.75,
+        "kappa": 0.4,
+        "ci_low": 0.16,
+        "ci_high": 0.62
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct valence, Calculation",
+      "source": "agreement",
+      "where": {
+        "level": "Construct valence",
+        "field": "Calculation"
+      },
+      "values": {
+        "n": 27,
+        "percent_agreement": 0.7,
+        "kappa": 0.52,
+        "ci_low": 0.25,
+        "ci_high": 0.76
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S2, construct valence, Collective Responsibility",
+      "source": "agreement",
+      "where": {
+        "level": "Construct valence",
+        "field": "Collective Responsibility"
+      },
+      "values": {
+        "n": 14,
+        "percent_agreement": 1.0,
+        "kappa": 1.0
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Table S5, English, relevance_accuracy",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "point_estimate": 0.97
+      }
+    },
+    {
+      "label": "Table S5, English, relevance_accuracy, interval",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "ci_low": 0.915,
+        "ci_high": 0.99
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, relevance_accuracy",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "point_difference": 0.0
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, relevance_accuracy, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "relevance_accuracy"
+      },
+      "values": {
+        "ci_low": -0.04,
+        "ci_high": 0.04
+      }
+    },
+    {
+      "label": "Table S5, English, has_relevant_5c_accuracy_gold_relevant",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.932
+      }
+    },
+    {
+      "label": "Table S5, English, has_relevant_5c_accuracy_gold_relevant, interval",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "ci_low": 0.851,
+        "ci_high": 0.971
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, has_relevant_5c_accuracy_gold_relevant",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_difference": 0.041
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, has_relevant_5c_accuracy_gold_relevant, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "ci_low": -0.039,
+        "ci_high": 0.121
+      }
+    },
+    {
+      "label": "Table S5, English, disease_accuracy_gold_relevant",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.905
+      }
+    },
+    {
+      "label": "Table S5, English, disease_accuracy_gold_relevant, interval",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "ci_low": 0.817,
+        "ci_high": 0.953
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, disease_accuracy_gold_relevant",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_difference": 0.0
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, disease_accuracy_gold_relevant, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "ci_low": -0.065,
+        "ci_high": 0.067
+      }
+    },
+    {
+      "label": "Table S5, English, construct_presence_macro_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.727
+      }
+    },
+    {
+      "label": "Table S5, English, construct_presence_macro_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "ci_low": 0.633,
+        "ci_high": 0.793
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_presence_macro_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_difference": -0.025
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_presence_macro_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "ci_low": -0.095,
+        "ci_high": 0.038
+      }
+    },
+    {
+      "label": "Table S5, English, construct_presence_micro_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.794
+      }
+    },
+    {
+      "label": "Table S5, English, construct_presence_micro_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "ci_low": 0.749,
+        "ci_high": 0.836
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_presence_micro_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_difference": -0.014
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_presence_micro_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "ci_low": -0.056,
+        "ci_high": 0.027
+      }
+    },
+    {
+      "label": "Table S5, English, construct_confidence_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_confidence_f1"
+      },
+      "values": {
+        "point_estimate": 0.87
+      }
+    },
+    {
+      "label": "Table S5, English, construct_confidence_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_confidence_f1"
+      },
+      "values": {
+        "ci_low": 0.796,
+        "ci_high": 0.932
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_confidence_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_confidence_f1"
+      },
+      "values": {
+        "point_difference": 0.04
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_confidence_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_confidence_f1"
+      },
+      "values": {
+        "ci_low": -0.023,
+        "ci_high": 0.109
+      }
+    },
+    {
+      "label": "Table S5, English, construct_complacency_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_complacency_f1"
+      },
+      "values": {
+        "point_estimate": 0.84
+      }
+    },
+    {
+      "label": "Table S5, English, construct_complacency_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_complacency_f1"
+      },
+      "values": {
+        "ci_low": 0.743,
+        "ci_high": 0.919
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_complacency_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_complacency_f1"
+      },
+      "values": {
+        "point_difference": -0.021
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_complacency_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_complacency_f1"
+      },
+      "values": {
+        "ci_low": -0.099,
+        "ci_high": 0.054
+      }
+    },
+    {
+      "label": "Table S5, English, construct_constraints_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_constraints_f1"
+      },
+      "values": {
+        "point_estimate": 0.774
+      }
+    },
+    {
+      "label": "Table S5, English, construct_constraints_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_constraints_f1"
+      },
+      "values": {
+        "ci_low": 0.667,
+        "ci_high": 0.86
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_constraints_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_constraints_f1"
+      },
+      "values": {
+        "point_difference": -0.056
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_constraints_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_constraints_f1"
+      },
+      "values": {
+        "ci_low": -0.147,
+        "ci_high": 0.03
+      }
+    },
+    {
+      "label": "Table S5, English, construct_calculation_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_calculation_f1"
+      },
+      "values": {
+        "point_estimate": 0.5
+      }
+    },
+    {
+      "label": "Table S5, English, construct_calculation_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_calculation_f1"
+      },
+      "values": {
+        "ci_low": 0.143,
+        "ci_high": 0.769
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_calculation_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_calculation_f1"
+      },
+      "values": {
+        "point_difference": -0.071
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_calculation_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_calculation_f1"
+      },
+      "values": {
+        "ci_low": -0.286,
+        "ci_high": 0.127
+      }
+    },
+    {
+      "label": "Table S5, English, construct_collective_responsibility_f1",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_collective_responsibility_f1"
+      },
+      "values": {
+        "point_estimate": 0.649
+      }
+    },
+    {
+      "label": "Table S5, English, construct_collective_responsibility_f1, interval",
+      "source": "f1_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "construct_collective_responsibility_f1"
+      },
+      "values": {
+        "ci_low": 0.438,
+        "ci_high": 0.811
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_collective_responsibility_f1",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_collective_responsibility_f1"
+      },
+      "values": {
+        "point_difference": -0.018
+      }
+    },
+    {
+      "label": "Table S5, English minus Slovenian, construct_collective_responsibility_f1, interval",
+      "source": "paired_en",
+      "where": {
+        "comparison": "EN_minus_SL",
+        "metric": "construct_collective_responsibility_f1"
+      },
+      "values": {
+        "ci_low": -0.233,
+        "ci_high": 0.196
+      }
+    },
+    {
+      "label": "Supplementary Methods S3, Apertus-8B sampled decoding, seed 20260417",
+      "source": "f1_decoding",
+      "where": {
+        "system_id": "A0_F0_S20260417",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.4
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Supplementary Methods S3, Apertus-8B sampled decoding, seed 7",
+      "source": "f1_decoding",
+      "where": {
+        "system_id": "A0_F0_S7",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.44
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Qwen3-32B pipeline, relevance sensitivity (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "relevance_sensitivity"
+      },
+      "values": {
+        "point_estimate": 0.973,
+        "ci_low": 0.907,
+        "ci_high": 0.993
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, relevance specificity (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "relevance_specificity"
+      },
+      "values": {
+        "point_estimate": 0.962,
+        "ci_low": 0.811,
+        "ci_high": 0.993
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, has relevant 5c accuracy gold relevant (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.892,
+        "ci_low": 0.801,
+        "ci_high": 0.944
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, relevance sensitivity (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "relevance_sensitivity"
+      },
+      "values": {
+        "point_estimate": 1.0,
+        "ci_low": 0.951,
+        "ci_high": 1.0
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, relevance specificity (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "relevance_specificity"
+      },
+      "values": {
+        "point_estimate": 0.038,
+        "ci_low": 0.007,
+        "ci_high": 0.189
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, has relevant 5c accuracy gold relevant (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "has_relevant_5c_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.757,
+        "ci_low": 0.648,
+        "ci_high": 0.84
+      }
+    },
+    {
+      "label": "Apertus-8B comparator, disease accuracy gold relevant (Table 1)",
+      "source": "wilson",
+      "where": {
+        "system_id": "A0_F2",
+        "metric": "disease_accuracy_gold_relevant"
+      },
+      "values": {
+        "point_estimate": 0.797,
+        "ci_low": 0.692,
+        "ci_high": 0.873
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, English, relevance sensitivity (Table 1)",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "relevance_sensitivity"
+      },
+      "values": {
+        "point_estimate": 0.973,
+        "ci_low": 0.907,
+        "ci_high": 0.993
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, English, relevance specificity (Table 1)",
+      "source": "wilson_en",
+      "where": {
+        "system_id": "G0_E2_EN",
+        "metric": "relevance_specificity"
+      },
+      "values": {
+        "point_estimate": 0.962,
+        "ci_low": 0.811,
+        "ci_high": 0.993
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, Complacency F1 (Table 2)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_complacency_f1"
+      },
+      "values": {
+        "point_estimate": 0.861,
+        "ci_low": 0.771,
+        "ci_high": 0.935
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, Confidence F1 (Table 2)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_confidence_f1"
+      },
+      "values": {
+        "point_estimate": 0.83,
+        "ci_low": 0.745,
+        "ci_high": 0.901
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, Constraints F1 (Table 2)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_constraints_f1"
+      },
+      "values": {
+        "point_estimate": 0.83,
+        "ci_low": 0.736,
+        "ci_high": 0.904
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, Collective Responsibility F1 (Table 2)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_collective_responsibility_f1"
+      },
+      "values": {
+        "point_estimate": 0.667,
+        "ci_low": 0.462,
+        "ci_high": 0.824
+      }
+    },
+    {
+      "label": "Qwen3-32B pipeline, Calculation F1 (Table 2)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E2",
+        "metric": "construct_calculation_f1"
+      },
+      "values": {
+        "point_estimate": 0.571,
+        "ci_low": 0.182,
+        "ci_high": 0.842
+      }
+    },
+    {
+      "label": "Qwen3-32B base extractor, construct macro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.542,
+        "ci_low": 0.418,
+        "ci_high": 0.652
+      }
+    },
+    {
+      "label": "Qwen3-32B base extractor, construct micro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E0",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.607,
+        "ci_low": 0.526,
+        "ci_high": 0.678
+      }
+    },
+    {
+      "label": "Qwen3-32B supervised extractor, construct macro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E1",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.659,
+        "ci_low": 0.536,
+        "ci_high": 0.752
+      }
+    },
+    {
+      "label": "Qwen3-32B supervised extractor, construct micro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "G0_E1",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.763,
+        "ci_low": 0.701,
+        "ci_high": 0.818
+      }
+    },
+    {
+      "label": "Apertus-8B base extractor, construct macro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F0",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.444,
+        "ci_low": 0.367,
+        "ci_high": 0.507
+      }
+    },
+    {
+      "label": "Apertus-8B base extractor, construct micro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F0",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.534,
+        "ci_low": 0.47,
+        "ci_high": 0.589
+      }
+    },
+    {
+      "label": "Apertus-8B supervised extractor, construct macro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F1",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "point_estimate": 0.298,
+        "ci_low": 0.25,
+        "ci_high": 0.343
+      }
+    },
+    {
+      "label": "Apertus-8B supervised extractor, construct micro-F1 (Table S1)",
+      "source": "f1",
+      "where": {
+        "system_id": "A0_F1",
+        "metric": "construct_presence_micro_f1"
+      },
+      "values": {
+        "point_estimate": 0.515,
+        "ci_low": 0.448,
+        "ci_high": 0.58
+      }
+    },
+    {
+      "label": "Event week 27 Sep 2021, Vaccine-specific lexical share (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "z_recomputed": 4.82
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Vaccine-specific lexical share (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "z_recomputed": 4.75
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Calculation presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "calculation_presence"
+      },
+      "values": {
+        "z_recomputed": 3.3
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Calculation presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "calculation_presence"
+      },
+      "values": {
+        "z_recomputed": 3.69
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Calculation-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "calculation_undermining"
+      },
+      "values": {
+        "z_recomputed": 3.28
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Calculation-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "calculation_undermining"
+      },
+      "values": {
+        "z_recomputed": 3.42
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Complacency-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "complacency_undermining"
+      },
+      "values": {
+        "z_recomputed": 2.11
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Complacency-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "complacency_undermining"
+      },
+      "values": {
+        "z_recomputed": 3.54
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Constraints-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "constraints_undermining"
+      },
+      "values": {
+        "z_recomputed": 1.67
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Constraints-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "constraints_undermining"
+      },
+      "values": {
+        "z_recomputed": 0.99
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Collective Responsibility-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "collective_responsibility_undermining"
+      },
+      "values": {
+        "z_recomputed": 1.23
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Collective Responsibility-undermining valence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "collective_responsibility_undermining"
+      },
+      "values": {
+        "z_recomputed": 1.08
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Confidence presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "confidence_presence"
+      },
+      "values": {
+        "z_recomputed": 0.9
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Confidence presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "confidence_presence"
+      },
+      "values": {
+        "z_recomputed": 1.48
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Any-5C presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "any_5c_share"
+      },
+      "values": {
+        "z_recomputed": 0.14
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Any-5C presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "any_5c_share"
+      },
+      "values": {
+        "z_recomputed": -1.69
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Article volume (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "article_volume"
+      },
+      "values": {
+        "z_recomputed": -0.21
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Article volume (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "article_volume"
+      },
+      "values": {
+        "z_recomputed": -1.18
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Complacency presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "complacency_presence"
+      },
+      "values": {
+        "z_recomputed": -0.25
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Complacency presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "complacency_presence"
+      },
+      "values": {
+        "z_recomputed": -0.99
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Constraints presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "constraints_presence"
+      },
+      "values": {
+        "z_recomputed": -1.51
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Constraints presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "constraints_presence"
+      },
+      "values": {
+        "z_recomputed": -2.53
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, Collective Responsibility presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "collective_responsibility_presence"
+      },
+      "values": {
+        "z_recomputed": -1.79
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 4 Oct 2021, Collective Responsibility presence (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "collective_responsibility_presence"
+      },
+      "values": {
+        "z_recomputed": -1.45
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Event week 27 Sep 2021, lexical marker, Bonferroni-adjusted p (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-09-27",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "p_bonferroni_26": 0.053
+      }
+    },
+    {
+      "label": "Event week 4 Oct 2021, lexical marker, Bonferroni-adjusted p (Table S6)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-04",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "p_bonferroni_26": 0.057
+      }
+    },
+    {
+      "label": "Out-of-window indicator-weeks and alarms above the 95% limit (Results)",
+      "source": "alarms",
+      "where": {
+        "period": "all",
+        "indicator_id": "all"
+      },
+      "values": {
+        "n_out_of_window": 156,
+        "n_above_95": 4
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Out-of-window week 18 Oct 2021, Confidence-undermining z (Results)",
+      "source": "event_window",
+      "where": {
+        "period": "2021-10-18",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "z_recomputed": 3.55
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Out-of-window alarm, 2021-10-18, Confidence-undermining (Results)",
+      "source": "alarms",
+      "where": {
+        "period": "2021-10-18",
+        "indicator_id": "confidence_undermining"
+      },
+      "values": {
+        "above_95": 1
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Out-of-window alarm, 2021-10-11, lexical marker (Results)",
+      "source": "alarms",
+      "where": {
+        "period": "2021-10-11",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "above_95": 1
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Out-of-window alarm, 2021-10-18, lexical marker (Results)",
+      "source": "alarms",
+      "where": {
+        "period": "2021-10-18",
+        "indicator_id": "janssen_lexical_share"
+      },
+      "values": {
+        "above_95": 1
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Out-of-window alarm, 2021-11-15, any-5C presence (November) (Results)",
+      "source": "alarms",
+      "where": {
+        "period": "2021-11-15",
+        "indicator_id": "any_5c_share"
+      },
+      "values": {
+        "above_95": 1
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Qwen3-32B relevance classifier, articles routed as relevant (S5 table note)",
+      "source": "routing",
+      "where": {
+        "system_id": "G0_E2"
+      },
+      "values": {
+        "n_routed_relevant": 73
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Qwen3-32B relevance classifier on English, articles routed as relevant (S5 table note)",
+      "source": "routing",
+      "where": {
+        "system_id": "G0_E2_EN"
+      },
+      "values": {
+        "n_routed_relevant": 73
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Apertus-8B relevance classifier, non-relevant articles passed / then given construct labels (Results)",
+      "source": "routing",
+      "where": {
+        "system_id": "A0_F2"
+      },
+      "values": {
+        "n_false_pass": 25,
+        "n_false_pass_with_constructs": 11
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Apertus-8B sampled decoding seed 20260417, macro-F1 CI (S3)",
+      "source": "f1_decoding",
+      "where": {
+        "system_id": "A0_F0_S20260417",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "ci_low": 0.33,
+        "ci_high": 0.46
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Apertus-8B sampled decoding seed 7, macro-F1 CI (S3)",
+      "source": "f1_decoding",
+      "where": {
+        "system_id": "A0_F0_S7",
+        "metric": "construct_presence_macro_f1"
+      },
+      "values": {
+        "ci_low": 0.36,
+        "ci_high": 0.5
+      },
+      "tolerance": 0.005
+    },
+    {
+      "label": "Audit, confidence_undermining, all, precision counts (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 86,
+        "n": 106
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, all, precision with Wilson CI (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "precision"
+      },
+      "values": {
+        "proportion": 0.81,
+        "ci_low": 0.73,
+        "ci_high": 0.87
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, calculation_present, all, precision counts (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 63,
+        "n": 120
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, calculation_present, all, precision with Wilson CI (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "precision"
+      },
+      "values": {
+        "proportion": 0.53,
+        "ci_low": 0.44,
+        "ci_high": 0.61
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, confidence_undermining, all, positive_among_unflagged counts (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "k": 8,
+        "n": 61
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, all, positive_among_unflagged with Wilson CI (Results)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "proportion": 0.13,
+        "ci_low": 0.07,
+        "ci_high": 0.24
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, confidence_undermining, all, flagged_among_positives counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "flagged_among_positives"
+      },
+      "values": {
+        "k": 86,
+        "n": 94
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, all, flagged_among_positives with Wilson CI (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "all",
+        "measure": "flagged_among_positives"
+      },
+      "values": {
+        "proportion": 0.91,
+        "ci_low": 0.84,
+        "ci_high": 0.96
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, calculation_present, all, positive_among_unflagged counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "k": 11,
+        "n": 47
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, calculation_present, all, positive_among_unflagged with Wilson CI (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "proportion": 0.23,
+        "ci_low": 0.14,
+        "ci_high": 0.37
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, calculation_present, all, flagged_among_positives counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "flagged_among_positives"
+      },
+      "values": {
+        "k": 63,
+        "n": 74
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, calculation_present, all, flagged_among_positives with Wilson CI (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "all",
+        "measure": "flagged_among_positives"
+      },
+      "values": {
+        "proportion": 0.85,
+        "ci_low": 0.75,
+        "ci_high": 0.91
+      },
+      "tolerance": 0.0050000010000000004
+    },
+    {
+      "label": "Audit, confidence_undermining, 2021-09-27, precision counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "2021-09-27",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 54,
+        "n": 65
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, 2021-10-04, precision counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "2021-10-04",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 32,
+        "n": 41
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, calculation_present, 2021-09-27, precision counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "2021-09-27",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 33,
+        "n": 67
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, calculation_present, 2021-10-04, precision counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "calculation_present",
+        "subset": "2021-10-04",
+        "measure": "precision"
+      },
+      "values": {
+        "k": 30,
+        "n": 53
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, 2021-09-27, positive_among_unflagged counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "2021-09-27",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "k": 7,
+        "n": 34
+      },
+      "tolerance": 0
+    },
+    {
+      "label": "Audit, confidence_undermining, 2021-10-04, positive_among_unflagged counts (S5)",
+      "source": "audit",
+      "where": {
+        "flag": "confidence_undermining",
+        "subset": "2021-10-04",
+        "measure": "positive_among_unflagged"
+      },
+      "values": {
+        "k": 1,
+        "n": 27
+      },
+      "tolerance": 0
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "base_model": "Qwen/Qwen3-32B",
+  "bf16": true,
+  "continue_from_adapter_repo": "Pucciami/qwen3-32b-5c-media-lora-clean-v2-gold300-readj-v1",
+  "dataset": {
+    "dev_fraction": 0.1,
+    "dev_jsonl": "data/processed/media_sft_clean_v2_stage_b_al159_replay90_v1/media_sft_dev.jsonl",
+    "source_tier": "mainstream_media",
+    "train_jsonl": "data/processed/media_sft_clean_v2_stage_b_al159_replay90_v1/media_sft_train.jsonl"
+  },
+  "evaluation_policy": {
+    "development_evidence": "train-side dev split only",
+    "locked_test": "Evaluate only after Stage B continuation completes; use the same explicit two-stage gated pipeline.",
+    "primary_comparator": "Stage A supervised adapter and base Qwen3-32B pipeline"
+  },
+  "fail_on_prompt_truncation": true,
+  "gradient_accumulation_steps": 8,
+  "gradient_checkpointing": true,
+  "learning_rate": 0.0001,
+  "load_in_4bit": true,
+  "logging_steps": 5,
+  "lora": {
+    "alpha": 16,
+    "dropout": 0.05,
+    "r": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "max_seq_length": 16384,
+  "num_train_epochs": 2,
+  "optim": "paged_adamw_8bit",
+  "output_dir": "models/qwen3_32b_5c_media_lora_clean_v2_stage_b_al159_replay90_v1",
+  "per_device_eval_batch_size": 1,
+  "per_device_train_batch_size": 1,
+  "privacy": {
+    "locked_test_upload_allowed": false,
+    "model_adapter_visibility": "private_only",
+    "notes": "Stage B continuation from the Stage A supervised adapter using all 159 active-learning articles plus 90 deterministic replay rows from the 300-article training set.",
+    "token_handling": "Use HF_TOKEN as an environment variable or Hugging Face Jobs/Spaces secret. Do not commit token files.",
+    "training_data_contains_raw_article_text": true,
+    "training_data_visibility": "private_only"
+  },
+  "save_strategy": "epoch",
+  "seed": 20260417,
+  "token_env": "HF_TOKEN",
+  "warmup_ratio": 0.05,
+  "weight_decay": 0.01
+}

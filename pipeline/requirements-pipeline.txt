@@ -1,0 +1,19 @@
+# All dependencies of the pipeline source in src/ (data preparation, selection of the
+# active-learning articles, LoRA training, relevance-classifier and extractor inference,
+# NLLB-200 translation).
+# The top-level requirements.txt stays limited to pandas and numpy, which is all reproduce.py needs.
+#
+# GPU packages (torch, bitsandbytes, sglang) need a CUDA-capable Linux machine. The relevance
+# classifier runner starts a local sglang server (`python -m sglang.launch_server`); the authors ran
+# it in the `lmsysorg/sglang:v0.5.8` container, where sglang is preinstalled.
+-r requirements-training.txt
+pandas>=2.0
+numpy>=1.24
+pyarrow            # parquet corpus files
+openpyxl           # .xlsx adjudication workbook (apply_active_learning_holdout_resolution.py)
+scikit-learn       # stratified 300/100 split (split_gold400_train_test.py)
+huggingface_hub
+httpx
+safetensors
+sentencepiece      # NLLB-200 tokenizer (src/translation/)
+sglang; platform_system == "Linux"

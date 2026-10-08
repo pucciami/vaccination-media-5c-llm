@@ -1,0 +1,12 @@
+# GPU training dependencies for `src/models/train_apertus_lora_media.py`.
+# Local data preparation does not require this file.
+#
+# On Windows/no-GPU machines, `bitsandbytes` may be skipped by the
+# platform marker below. Final QLoRA training should run in a GPU-capable
+# Linux environment where `bitsandbytes` is available.
+accelerate
+bitsandbytes; platform_system != "Windows"
+datasets
+peft
+torch
+transformers

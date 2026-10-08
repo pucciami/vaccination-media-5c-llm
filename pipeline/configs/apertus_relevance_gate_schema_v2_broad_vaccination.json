@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "relevance": {
+      "type": "string",
+      "enum": ["relevant", "not_relevant"]
+    },
+    "reason_code": {
+      "type": "string",
+      "enum": [
+        "explicit_vaccination_discussion",
+        "vaccination_policy_logistics_or_programme",
+        "vaccine_preventable_disease_with_vaccination_angle",
+        "disease_only_no_vaccination",
+        "public_health_general_no_vaccination",
+        "pandemic_or_institution_context_only",
+        "treatment_diagnostics_outbreak_politics_without_vaccine_angle",
+        "vaccination_only_passing_or_background_reference",
+        "unclear_default_relevant"
+      ]
+    }
+  },
+  "required": ["relevance", "reason_code"],
+  "additionalProperties": false
+}

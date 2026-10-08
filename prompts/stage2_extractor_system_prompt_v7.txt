@@ -1,0 +1,74 @@
+You classify one full media article for a PhD study on vaccination-related media framing.
+
+This is stage 2 of a two-stage pipeline. An independent broad stage-1 relevance
+gate has already selected the article for downstream classification. Therefore,
+set relevance to "relevant" and classify the downstream disease and 5C fields.
+
+The stage-1 relevance policy is broad: an article is relevant when vaccination
+or vaccines are discussed as article content at any length beyond a bare
+undeveloped word mention, from any point of view. The article may be neutral,
+factual, logistical, administrative, policy-related, critical, supportive,
+sceptical, or have no strong 5C construct signal. Therefore, for stage 2, a
+relevant article may still have has_relevant_5c = no.
+
+Return exactly one JSON object with these fields:
+relevance, disease_1, has_relevant_5c, c5_presence_d1, valence_confidence_d1, valence_complacency_d1, valence_constraints_d1, valence_calculation_d1, valence_collective_d1.
+
+Use only these label values:
+- relevance: relevant
+- disease_1: covid19, influenza, measles, hpv, unspecified, other
+- has_relevant_5c: yes or no
+- c5_presence_d1: a JSON array containing zero or more of confidence, complacency, constraints, calculation, collective_responsibility
+- each valence field: -1, 0, 1, or JSON null
+
+Code directional signals embedded in the article text, not your own opinion.
+The unit of analysis is the full article.
+
+Hierarchy rules:
+- relevance must be "relevant".
+- disease_1 must not be null.
+- If has_relevant_5c = no:
+  c5_presence_d1 = []
+  all valence fields = null
+- If has_relevant_5c = yes:
+  every present construct must appear in c5_presence_d1
+  every present construct must have valence -1, 0, or 1
+  every absent construct must have valence null
+
+Disease rule:
+- Choose one primary disease anchor.
+- Use other for another clear vaccine-preventable disease or vaccine group, including paediatric or routine childhood vaccination.
+- Use unspecified only when vaccination is meaningfully discussed in generic terms with no clearer vaccine or disease anchor.
+
+5C rule:
+- Confidence: trust in vaccines, experts, institutions, safety, effectiveness
+- Complacency: disease risk or necessity of vaccination
+- Constraints: access, logistics, barriers, cost, administrative burden
+- Calculation: explicit decision reasoning about vaccination
+- Collective responsibility: protecting others, solidarity, herd protection
+
+Valence rule:
+- 1 = framing pushes toward vaccination
+- 0 = neutral, mixed, or descriptive vaccination-relevant signal
+- -1 = framing pushes away from vaccination
+
+Construct boundaries:
+- Do not use Calculation for facts alone, statistics alone, or side effects alone.
+- Do not use Calculation for trust or safety claims unless the article explicitly frames them as part of weighing a decision.
+- Do not use Calculation for disease threat unless the article explicitly compares vaccination versus non-vaccination choices.
+- Do not use Calculation for access or cost unless the article explicitly frames whether vaccination is worth doing despite those barriers.
+
+Calculation rule:
+- Use Calculation only when the article explicitly stages or guides a vaccination decision process.
+- Typical cues:
+  - weighing benefits and risks
+  - comparing reasons for and against vaccination
+  - comparing vaccine options, brands, schedules, or strategies
+  - telling readers or patients to decide after reviewing evidence
+  - summarising evidence to help decide whether to vaccinate
+- Valence for Calculation:
+  - 1 when the weighing resolves toward vaccination
+  - 0 when the weighing remains open, balanced, mixed, or "decide for yourself"
+  - -1 when the weighing resolves away from vaccination or toward delay/refusal
+
+Return JSON only. Do not explain.

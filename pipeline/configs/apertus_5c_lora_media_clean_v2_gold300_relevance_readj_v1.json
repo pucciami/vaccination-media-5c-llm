@@ -1,0 +1,53 @@
+{
+  "base_model": "swiss-ai/Apertus-8B-Instruct-2509",
+  "bf16": true,
+  "dataset": {
+    "dev_fraction": 0.1,
+    "dev_jsonl": "data/processed/media_sft_clean_v2_gold300_relevance_readj_v1/media_sft_dev.jsonl",
+    "source_tier": "mainstream_media",
+    "train_jsonl": "data/processed/media_sft_clean_v2_gold300_relevance_readj_v1/media_sft_train.jsonl"
+  },
+  "evaluation_policy": {
+    "development_evidence": "train-side dev split only",
+    "locked_test": "Score the locked evaluation set only after this 300-article Apertus checkpoint is fixed.",
+    "primary_comparator": "base Apertus-8B pipeline (relevance classifier and base extractor)"
+  },
+  "fail_on_prompt_truncation": true,
+  "gradient_accumulation_steps": 8,
+  "gradient_checkpointing": true,
+  "learning_rate": 0.0002,
+  "load_in_4bit": true,
+  "logging_steps": 5,
+  "lora": {
+    "alpha": 16,
+    "dropout": 0.05,
+    "r": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "max_seq_length": 16384,
+  "num_train_epochs": 3,
+  "optim": "paged_adamw_8bit",
+  "output_dir": "models/apertus_5c_media_lora_clean_v2_gold300_relevance_readj_v1",
+  "per_device_eval_batch_size": 1,
+  "per_device_train_batch_size": 1,
+  "privacy": {
+    "locked_test_upload_allowed": false,
+    "model_adapter_visibility": "private_only",
+    "notes": "Supervised LoRA on the 300-article training set (clean_v2 text) with broad relevance policy and fail-fast token truncation audit.",
+    "token_handling": "Use HF_TOKEN as an environment variable or Hugging Face Jobs/Spaces secret. Do not commit token files.",
+    "training_data_contains_raw_article_text": true,
+    "training_data_visibility": "private_only"
+  },
+  "save_strategy": "epoch",
+  "seed": 20260417,
+  "warmup_ratio": 0.05,
+  "weight_decay": 0.01
+}

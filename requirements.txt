@@ -1,0 +1,5 @@
+# Runtime dependencies for the analysis scripts in scripts/.
+# Python >= 3.10 (uses PEP 604 typing and `from __future__ import annotations`).
+# Pinned to lower bounds known to work; newer versions are expected to be compatible.
+pandas>=2.0
+numpy>=1.24
